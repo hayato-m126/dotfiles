@@ -10,16 +10,17 @@ source /etc/skel/.bashrc
 test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
 # ros1
-UBUNTU_VER=$(lsb_release -sc)
-if [ "$UBUNTU_VER" = "focal" ]; then
+if [ -d "/opt/ros" ]; then
+  UBUNTU_VER=$(lsb_release -sc)
+  if [ "$UBUNTU_VER" = "focal" ]; then
     source /opt/ros/noetic/setup.bash
-elif [ "$UBUNTU_VER" = "bionic" ]; then
+  elif [ "$UBUNTU_VER" = "bionic" ]; then
     source /opt/ros/melodic/setup.bash
-elif [ "$UBUNTU_VER" = "xenial" ]; then
+  elif [ "$UBUNTU_VER" = "xenial" ]; then
     source /opt/ros/kinetic/setup.bash
+  fi
+  source ~/catkin_ws/devel/setup.bash
 fi
-source ~/catkin_ws/devel/setup.bash
-source ~/autoware.proj/install/setup.bash
 
 # cuda
 export PATH="/usr/local/cuda/bin:$PATH"
