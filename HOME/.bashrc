@@ -9,10 +9,6 @@ source /etc/skel/.bashrc
 # homebrew
 test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
-# anyenv
-export PATH="$HOME/.anyenv/bin:$PATH"
-eval "$(anyenv init -)"
-
 # ros1
 UBUNTU_VER=$(lsb_release -sc)
 if [ "$UBUNTU_VER" = "focal" ]; then
