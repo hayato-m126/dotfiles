@@ -9,17 +9,26 @@ source /etc/skel/.bashrc
 # homebrew
 test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
-# ros1
+# ros
 if [ -d "/opt/ros" ]; then
-  UBUNTU_VER=$(lsb_release -sc)
-  if [ "$UBUNTU_VER" = "focal" ]; then
+  # ros1
+  if [ -d "/opt/ros/noetic" ]; then
     source /opt/ros/noetic/setup.bash
-  elif [ "$UBUNTU_VER" = "bionic" ]; then
+  elif [ -d "/opt/ros/melodic" ]; then
     source /opt/ros/melodic/setup.bash
-  elif [ "$UBUNTU_VER" = "xenial" ]; then
+  elif [ -d "/opt/ros/kinetic" ]; then
     source /opt/ros/kinetic/setup.bash
   fi
-  source ~/catkin_ws/devel/setup.bash
+  # additional ws
+  if [ -d "$HOME/autoware/install" ]; then
+    source $HOME/autoware/install/setup.bash
+  fi
+  if [ -d "$HOME/autoware/devel" ]; then
+    source $HOME/autoware/devel/setup.bash
+  fi
+  if [ -d "${HOME}/catkin_ws/devel" ]; then
+    source $HOME/catkin_ws/devel/setup.bash
+  fi
 fi
 
 # cuda
