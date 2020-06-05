@@ -19,16 +19,6 @@ if [ -d "/opt/ros" ]; then
   elif [ -d "/opt/ros/kinetic" ]; then
     source /opt/ros/kinetic/setup.bash
   fi
-  # additional ws
-  if [ -d "$HOME/autoware/install" ]; then
-    source $HOME/autoware/install/setup.bash
-  fi
-  if [ -d "$HOME/autoware/devel" ]; then
-    source $HOME/autoware/devel/setup.bash
-  fi
-  if [ -d "${HOME}/catkin_ws/devel" ]; then
-    source $HOME/catkin_ws/devel/setup.bash
-  fi
 fi
 
 # cuda
