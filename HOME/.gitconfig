@@ -1,3 +1,5 @@
 [user]
 	name = Hayato Mizushima
 	email = hayato-m126@users.noreply.github.com
+[url "git@github.com:"]
+    insteadOf = https://github.com/
