@@ -32,6 +32,6 @@ command -v anyenv > /dev/null 2>&1 && eval "$(anyenv init -)"
 test -d $HOME/.anyenv/envs/goenv && export PATH=$PATH:$GOPATH/bin
 
 # luanch fish
-#if [ -z "$FISH_VERSION" ]; then
-# command -v fish > /dev/null 2>&1 && exec fish
-#fi
+if [ -z "$FISH_VERSION" ]; then
+  command -v fish > /dev/null 2>&1 && exec fish
+fi
