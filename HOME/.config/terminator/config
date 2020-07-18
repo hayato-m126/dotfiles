@@ -3,7 +3,6 @@
 [layouts]
   [[default]]
     [[[child1]]]
-      command = fish
       parent = window0
       profile = default
       type = Terminal
