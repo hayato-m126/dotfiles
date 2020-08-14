@@ -1,5 +1,8 @@
 [user]
-	name = Hayato Mizushima
-	email = hayato-m126@users.noreply.github.com
+  name = Hayato Mizushima
+  email = hayato-m126@users.noreply.github.com
 [url "git@github.com:"]
-    insteadOf = https://github.com/
+  insteadOf = https://github.com/
+[ghq]
+  root = ~/go/1.13.14/src
+  root = ~/ghq
