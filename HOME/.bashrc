@@ -22,12 +22,6 @@ export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
 # anyenv
 command -v anyenv > /dev/null 2>&1 && eval "$(anyenv init -)"
 
-# go
-test -d $HOME/.anyenv/envs/goenv && export PATH=$PATH:$GOPATH/bin
-
-# gh completion
-eval "$(gh completion -s bash)"
-
 # luanch fish
 if [ -z "$FISH_VERSION" ]; then
   command -v fish > /dev/null 2>&1 && exec fish
