@@ -9,17 +9,11 @@ source /etc/skel/.bashrc
 # homebrew
 test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
-# ros
-if [ -d "/opt/ros" ]; then
-  # ros1
-  if [ -d "/opt/ros/noetic" ]; then
-    source /opt/ros/noetic/setup.bash
-  elif [ -d "/opt/ros/melodic" ]; then
-    source /opt/ros/melodic/setup.bash
-  elif [ -d "/opt/ros/kinetic" ]; then
-    source /opt/ros/kinetic/setup.bash
-  fi
-fi
+# ros1
+# source /opt/ros/noetic/setup.bash
+
+# ros2
+source /opt/ros/foxy/setup.bash
 
 # cuda
 export PATH="/usr/local/cuda/bin:$PATH"

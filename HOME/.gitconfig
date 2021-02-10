@@ -4,5 +4,5 @@
 [url "git@github.com:"]
   insteadOf = https://github.com/
 [ghq]
-  root = ~/go/1.13.14/src
+  root = ~/AutowareArchitectureProposal.proj/src
   root = ~/ghq
