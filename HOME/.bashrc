@@ -5,22 +5,22 @@ case $- in
 esac
 
 source /etc/skel/.bashrc
+source ~/.asdf/asdf.sh
 
-# homebrew
-test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-
-# ros1
+# ROS1
 # source /opt/ros/noetic/setup.bash
 
-# ros2
+# ROS2
 source /opt/ros/foxy/setup.bash
+
+# DDS setting
+export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+export CYCLONEDDS_URI=file:///opt/autoware/cyclonedds_config.xml
+export AW_ROS2_USE_SIM_TIME=true
 
 # cuda
 export PATH="/usr/local/cuda/bin:$PATH"
 export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
-
-# anyenv
-command -v anyenv > /dev/null 2>&1 && eval "$(anyenv init -)"
 
 # luanch fish
 if [ -z "$FISH_VERSION" ]; then

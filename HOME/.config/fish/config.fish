@@ -2,7 +2,7 @@
 set SHELL (which fish)
 
 # colcon
-alias colcon='__colcon_find_workspace_dir > /dev/null && cd (__colcon_find_workspace_dir); command colcon'
+#alias colcon='__colcon_find_workspace_dir > /dev/null && cd (__colcon_find_workspace_dir); command colcon'
 
 # ROS
 if set -q ROS_DISTRO
@@ -12,3 +12,6 @@ if set -q ROS_DISTRO
     register-python-argcomplete --shell fish ros2 | source
   end
 end
+
+# Created by `pipx` on 2021-04-15 00:28:02
+set PATH $PATH /home/hyt/.local/bin
