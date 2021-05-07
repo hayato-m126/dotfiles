@@ -1,5 +1,6 @@
 #!/bin/bash
 
+mkdir -p ~/.config/terminator
 cd HOME
 for file in `find . -type f` ; do
   # escape . and /, replace ./ to ""
