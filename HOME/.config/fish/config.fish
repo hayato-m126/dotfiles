@@ -15,3 +15,5 @@ end
 
 # Created by `pipx` on 2021-04-15 00:28:02
 set PATH $PATH /home/hyt/.local/bin
+
+eval (direnv hook fish)
