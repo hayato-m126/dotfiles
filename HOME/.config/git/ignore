@@ -1,2 +1,6 @@
 # ROS2 log
 log/
+
+# local settings
+.envrc
+.tool-versions
