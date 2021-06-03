@@ -11,7 +11,7 @@ source ~/.asdf/asdf.sh
 #source /opt/ros/noetic/setup.bash
 
 # ROS2
-source /opt/ros/foxy/setup.bash
+#source /opt/ros/foxy/setup.bash
 
 export RCUTILS_COLORIZED_OUTPUT=1
 
@@ -26,6 +26,9 @@ export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
 
 # golang
 export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$PATH 
+#export GOSUMDB=off
+#export GOPROXY=direct
 
 # luanch fish
 if [ -z "$FISH_VERSION" ]; then
