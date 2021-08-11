@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mkdir -p ~/.config/terminator
+mkdir -p ~/.config/terminator/plugins
 mkdir -p ~/.config/git
 
 SCRIPT_DIR=$(cd $(dirname $0); pwd)
