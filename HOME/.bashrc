@@ -34,6 +34,9 @@ export PATH=$GOPATH/bin:$PATH
 #export GOSUMDB=off
 #export GOPROXY=direct
 
+# pipenv
+export PIPENV_VENV_IN_PROJECT=1
+
 # luanch fish
 if [ -z "$FISH_VERSION" ]; then
   command -v fish > /dev/null 2>&1 && exec fish
