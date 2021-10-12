@@ -4,3 +4,4 @@ python system
 golang 1.17
 nodejs 12.4.0
 direnv 2.28.0
+awscli 2.2.45
