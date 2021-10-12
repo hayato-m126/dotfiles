@@ -1,7 +1,7 @@
 #!/bin/bash
 
 mkdir -p ~/.ssh
-mkdir -p ~/.cofing/fish
+mkdir -p ~/.cofig/fish
 mkdir -p ~/.config/terminator/plugins
 mkdir -p ~/.config/git
 
