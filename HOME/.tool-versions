@@ -7,3 +7,4 @@ direnv 2.28.0
 awscli 2.2.45
 kubectl 1.22.2
 yq v4.13.4
+asciidoctorj 2.5.2
