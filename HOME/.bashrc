@@ -14,6 +14,7 @@ source ~/.asdf/asdf.sh
 export RCUTILS_COLORIZED_OUTPUT=1
 export RCUTILS_CONSOLE_OUTPUT_FORMAT="[{severity} {time}] [{name}]: {message}"
 # DDS
+export ROS_DOMAIN_ID=77
 export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
 export CYCLONEDDS_URI=file:///opt/autoware/cyclonedds_config.xml
 export AW_ROS2_USE_SIM_TIME=true
@@ -27,7 +28,7 @@ export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
 
 # C++ torch, for autoware
 # If the line below is valid, pytorch instalation will be failed. import torch shows msgs "libtorch_cuda_cpp.so: undefined symbol"
-# export LD_LIBRARY_PATH="/usr/local/libtorch/lib:$LD_LIBRARY_PATH"
+export LD_LIBRARY_PATH="/usr/local/libtorch/lib:$LD_LIBRARY_PATH"
 
 # golang
 export GOPATH=$HOME/go
