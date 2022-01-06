@@ -12,7 +12,7 @@ source ~/.asdf/asdf.sh
 
 # ROS2
 export RCUTILS_COLORIZED_OUTPUT=1
-export RCUTILS_CONSOLE_OUTPUT_FORMAT="[{severity} {time}] [{name}]: {message}"
+# export RCUTILS_CONSOLE_OUTPUT_FORMAT="[{severity} {time}] [{name}]: {message}"
 # DDS
 export ROS_DOMAIN_ID=77
 export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
