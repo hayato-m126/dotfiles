@@ -1,10 +1,10 @@
-fzf 0.27.2
+fzf 0.29.0
 ghq 1.2.1
 python system
 golang 1.17
-nodejs 12.4.0
-direnv 2.28.0
+nodejs 16.13.2
+direnv 2.30.3
 awscli 2.2.45
 kubectl 1.22.2
-yq 4.13.5
+yq 4.9.8
 asciidoctorj 2.5.2
