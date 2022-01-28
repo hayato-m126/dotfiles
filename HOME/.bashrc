@@ -18,7 +18,7 @@ export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
 export CYCLONEDDS_URI=file:///opt/autoware/cyclonedds_config.xml
 export AW_ROS2_USE_SIM_TIME=true
 # ROS2 analysis https://tier4.github.io/CARET_doc/
-export LD_PRELOAD=$(readlink -f ~/ros_ws/caret/install/caret_trace/lib/libcaret.so)
+# export LD_PRELOAD=$(readlink -f ~/ros_ws/caret/install/caret_trace/lib/libcaret.so)
 export CARET_IGNORE_NODES="/rviz*"
 export CARET_IGNORE_TOPICS="/clock:/parameter_events"
 
