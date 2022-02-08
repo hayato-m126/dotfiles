@@ -10,19 +10,20 @@ source ~/.asdf/asdf.sh
 # ROS1
 #source /opt/ros/noetic/setup.bash
 
-# ROS2
-export RCUTILS_COLORIZED_OUTPUT=1
-# DDS
+# ROS2 DDS
 export ROS_DOMAIN_ID=77
 export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
 export CYCLONEDDS_URI=file:///opt/autoware/cyclonedds_config.xml
-# ROS2 analysis https://tier4.github.io/CARET_doc/
-# export LD_PRELOAD=$(readlink -f ~/ros_ws/caret/install/caret_trace/lib/libcaret.so)
-export CARET_IGNORE_NODES="/rviz*"
-export CARET_IGNORE_TOPICS="/clock:/parameter_events"
-
-# ROS2 galactic
+# ROS2
+export RCUTILS_COLORIZED_OUTPUT=1
 source /opt/ros/galactic/setup.bash
+# ROS2 analysis https://tier4.github.io/CARET_doc/
+# source ~/ros_ws/caret/install/local_setup.bash
+# source ~/ros_ws/gsm8.iv.caret/install/local_setup.bash
+# export ROS_TRACE_DIR=~/out/caret
+# export LD_PRELOAD=$(readlink -f ~/ros_ws/caret/install/caret_trace/lib/libcaret.so)
+# export CARET_IGNORE_NODES="/rviz*"
+# export CARET_IGNORE_TOPICS="/clock:/parameter_events"
 
 # cuda
 export PATH="/usr/local/cuda/bin:$PATH"
