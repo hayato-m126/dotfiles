@@ -4,6 +4,8 @@
 [url "git@github.com:"]
   insteadOf = https://github.com/
 [ghq]
-  root = ~/ros_ws/logsim_ws/src
+  #root = ~/ros_ws/gsm8.iv/src
+  root = ~/ros_ws/gsm8/src
+  root = ~/ros_ws/auto_converter/src
   root = ~/go/src
   root = ~/ghq

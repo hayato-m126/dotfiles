@@ -16,7 +16,6 @@ export RCUTILS_COLORIZED_OUTPUT=1
 export ROS_DOMAIN_ID=77
 export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
 export CYCLONEDDS_URI=file:///opt/autoware/cyclonedds_config.xml
-export AW_ROS2_USE_SIM_TIME=true
 # ROS2 analysis https://tier4.github.io/CARET_doc/
 # export LD_PRELOAD=$(readlink -f ~/ros_ws/caret/install/caret_trace/lib/libcaret.so)
 export CARET_IGNORE_NODES="/rviz*"
@@ -38,9 +37,6 @@ export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH
 #export GOSUMDB=off
 #export GOPROXY=direct
-
-# pipenv
-export PIPENV_VENV_IN_PROJECT=1
 
 # luanch fish
 if [ -z "$FISH_VERSION" ]; then
