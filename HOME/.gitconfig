@@ -7,5 +7,4 @@
   #root = ~/ros_ws/gsm8.iv/src
   root = ~/ros_ws/gsm8/src
   root = ~/ros_ws/auto_converter/src
-  root = ~/go/src
   root = ~/ghq
