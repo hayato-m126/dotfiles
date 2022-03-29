@@ -9,3 +9,4 @@ kubectl 1.22.2
 yq 4.23.1
 asciidoctorj 2.5.2
 ripgrep 13.0.0
+aws-sam-cli 1.43.0
