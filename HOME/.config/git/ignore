@@ -4,3 +4,8 @@ log/
 # local settings
 .envrc
 .tool-versions
+
+# vscode cache
+browse.vc.db
+browse.vc.db-shm
+browse.vc.db-wal
