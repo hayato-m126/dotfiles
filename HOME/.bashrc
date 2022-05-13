@@ -7,16 +7,14 @@ esac
 source /etc/skel/.bashrc
 source ~/.asdf/asdf.sh
 
-# ROS1
-#source /opt/ros/noetic/setup.bash
-
 # ROS2 DDS
 export ROS_DOMAIN_ID=77
 export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
-export CYCLONEDDS_URI=file:///opt/autoware/cyclonedds_config.xml
+export CYCLONEDDS_URI=file://$HOME/.ros/cyclonedds_config.xml
 # ROS2
 export RCUTILS_COLORIZED_OUTPUT=1
 source /opt/ros/galactic/setup.bash
+source $HOME/ros_ws/extension/install/local_setup.bash
 # ROS2 analysis https://tier4.github.io/CARET_doc/
 # source ~/ros_ws/caret/install/local_setup.bash
 # source ~/ros_ws/gsm8.iv.caret/install/local_setup.bash

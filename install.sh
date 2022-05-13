@@ -4,6 +4,7 @@ mkdir -p ~/.ssh
 mkdir -p ~/.config/fish
 mkdir -p ~/.config/terminator/plugins
 mkdir -p ~/.config/git
+mkdir -p ~/.ros
 
 SCRIPT_DIR=$(cd $(dirname $0); pwd)
 
