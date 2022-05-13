@@ -5,23 +5,28 @@ case $- in
 esac
 
 source /etc/skel/.bashrc
-source ~/.asdf/asdf.sh
+source $HOME/.asdf/asdf.sh
 
-# ROS2 DDS
-export ROS_DOMAIN_ID=77
-export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
-export CYCLONEDDS_URI=file://$HOME/.ros/cyclonedds_config.xml
 # ROS2
-export RCUTILS_COLORIZED_OUTPUT=1
-source /opt/ros/galactic/setup.bash
-source $HOME/ros_ws/extension/install/local_setup.bash
-# ROS2 analysis https://tier4.github.io/CARET_doc/
-# source ~/ros_ws/caret/install/local_setup.bash
-# source ~/ros_ws/gsm8.iv.caret/install/local_setup.bash
-# export ROS_TRACE_DIR=~/out/caret
-# export LD_PRELOAD=$(readlink -f ~/ros_ws/caret/install/caret_trace/lib/libcaret.so)
-# export CARET_IGNORE_NODES="/rviz*"
-# export CARET_IGNORE_TOPICS="/clock:/parameter_events"
+if [ -d "/opt/ros" ]; then
+  # DDS
+  ifconfig lo multicast
+  export ROS_DOMAIN_ID=77
+  export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+  export CYCLONEDDS_URI=file://$HOME/.ros/cyclonedds_config.xml
+  export RCUTILS_COLORIZED_OUTPUT=1
+
+  # source
+  source /opt/ros/galactic/setup.bash
+  source $HOME/ros_ws/extension/install/local_setup.bash
+  # ROS2 analysis https://tier4.github.io/CARET_doc/
+  # source ~/ros_ws/caret/install/local_setup.bash
+  # source ~/ros_ws/gsm8.iv.caret/install/local_setup.bash
+  # export ROS_TRACE_DIR=~/out/caret
+  # export LD_PRELOAD=$(readlink -f ~/ros_ws/caret/install/caret_trace/lib/libcaret.so)
+  # export CARET_IGNORE_NODES="/rviz*"
+  # export CARET_IGNORE_TOPICS="/clock:/parameter_events"
+fi
 
 # cuda
 export PATH="/usr/local/cuda/bin:$PATH"
