@@ -18,7 +18,9 @@ if [ -d "/opt/ros" ]; then
 
   # source
   source /opt/ros/galactic/setup.bash
-  source $HOME/ros_ws/extension/install/local_setup.bash
+  if [ -d "$HOME/ros_ws/extension" ]; then
+    source $HOME/ros_ws/extension/install/local_setup.bash
+  fi
   # ROS2 analysis https://tier4.github.io/CARET_doc/
   # source ~/ros_ws/caret/install/local_setup.bash
   # source ~/ros_ws/gsm8.iv.caret/install/local_setup.bash
