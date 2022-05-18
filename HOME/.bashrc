@@ -17,7 +17,11 @@ if [ -d "/opt/ros" ]; then
   export RCUTILS_COLORIZED_OUTPUT=1
 
   # source
-  source /opt/ros/galactic/setup.bash
+  if [ -d "/opt/ros/galactic" ]; then
+    source /opt/ros/galactic/setup.bash
+  elif [ -d "opt/ros/humble" ]; then
+      source /opt/ros/humble/setup.bash
+  fi
   if [ -d "$HOME/ros_ws/extension" ]; then
     source $HOME/ros_ws/extension/install/local_setup.bash
   fi
