@@ -11,6 +11,7 @@ source $HOME/.asdf/asdf.sh
 if [ -d "/opt/ros" ]; then
   # DDS
   ifconfig lo multicast
+  export ROS_LOCALHOST_ONLY=1
   export ROS_DOMAIN_ID=77
   export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
   export CYCLONEDDS_URI=file://$HOME/.ros/cyclonedds_config.xml
