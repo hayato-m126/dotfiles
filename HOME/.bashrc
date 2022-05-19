@@ -35,6 +35,11 @@ if [ -d "/opt/ros" ]; then
   # export CARET_IGNORE_TOPICS="/clock:/parameter_events"
 fi
 
+if command -v ccache > /dev/null 2>&1; then
+  export CC="/usr/lib/ccache/gcc"
+  export CXX="/usr/lib/ccache/g++"
+fi
+
 # cuda
 export PATH="/usr/local/cuda/bin:$PATH"
 export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
