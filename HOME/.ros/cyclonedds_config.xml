@@ -3,7 +3,7 @@
   <Domain Id="any">
     <General>
       <Interfaces>
-        <NetworkInterface name="lo" priority="default" multicast="default" />
+        <NetworkInterface autodetermine="true" priority="default" multicast="default" />
       </Interfaces>
       <AllowMulticast>spdp</AllowMulticast>
       <MaxMessageSize>65500B</MaxMessageSize>
