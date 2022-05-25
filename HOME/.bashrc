@@ -5,6 +5,7 @@ case $- in
 esac
 
 source /etc/skel/.bashrc
+export PATH="$HOME/.local/bin:$PATH"
 source $HOME/.asdf/asdf.sh
 
 # ROS2
@@ -23,9 +24,9 @@ if [ -d "/opt/ros" ]; then
   elif [ -d "/opt/ros/humble" ]; then
     source /opt/ros/humble/setup.bash
   fi
-  if [ -d "$HOME/ros_ws/extension" ]; then
-    source $HOME/ros_ws/extension/install/local_setup.bash
-  fi
+  #if [ -d "$HOME/ros_ws/extension" ]; then
+  #  source $HOME/ros_ws/extension/install/local_setup.bash
+  #fi
   # ROS2 analysis https://tier4.github.io/CARET_doc/
   # source ~/ros_ws/caret/install/local_setup.bash
   # source ~/ros_ws/gsm8.iv.caret/install/local_setup.bash

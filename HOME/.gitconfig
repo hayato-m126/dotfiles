@@ -4,5 +4,6 @@
 [url "git@github.com:"]
   insteadOf = https://github.com/
 [ghq]
+  root = ~/ros_ws/autoware/src
   root = ~/ros_ws/x2/src
   root = ~/ghq
