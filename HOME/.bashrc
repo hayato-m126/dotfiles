@@ -14,21 +14,22 @@ if [ -d "/opt/ros" ]; then
   export ROS_LOCALHOST_ONLY=1
   export ROS_DOMAIN_ID=77
   export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
-  export CYCLONEDDS_URI=file://$HOME/.ros/cyclonedds_config.xml
   export RCUTILS_COLORIZED_OUTPUT=1
 
   # source
   if [ -d "/opt/ros/galactic" ]; then
+    export CYCLONEDDS_URI=file://$HOME/.ros/cyclonedds_galactic.xml
     source /opt/ros/galactic/setup.bash
   elif [ -d "/opt/ros/humble" ]; then
+    export CYCLONEDDS_URI=file://$HOME/.ros/cyclonedds_humble.xml
     source /opt/ros/humble/setup.bash
   fi
-  if [ -d "$HOME/ros_ws/extension" ]; then
-    source $HOME/ros_ws/extension/install/local_setup.bash
-  fi
+  #if [ -d "$HOME/ros_ws/extension" ]; then
+  #  source $HOME/ros_ws/extension/install/local_setup.bash
+  #fi
   # ROS2 analysis https://tier4.github.io/CARET_doc/
   # source ~/ros_ws/caret/install/local_setup.bash
-  # source ~/ros_ws/gsm8.iv.caret/install/local_setup.bash
+  # source ~/ros_ws/x2.caret/install/local_setup.bash
   # export ROS_TRACE_DIR=~/out/caret
   # export LD_PRELOAD=$(readlink -f ~/ros_ws/caret/install/caret_trace/lib/libcaret.so)
   # export CARET_IGNORE_NODES="/rviz*"
