@@ -14,13 +14,14 @@ if [ -d "/opt/ros" ]; then
   export ROS_LOCALHOST_ONLY=1
   export ROS_DOMAIN_ID=77
   export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
-  export CYCLONEDDS_URI=file://$HOME/.ros/cyclonedds_config.xml
   export RCUTILS_COLORIZED_OUTPUT=1
 
   # source
   if [ -d "/opt/ros/galactic" ]; then
+    export CYCLONEDDS_URI=file://$HOME/.ros/cyclonedds_galactic.xml
     source /opt/ros/galactic/setup.bash
   elif [ -d "/opt/ros/humble" ]; then
+    export CYCLONEDDS_URI=file://$HOME/.ros/cyclonedds_humble.xml
     source /opt/ros/humble/setup.bash
   fi
   #if [ -d "$HOME/ros_ws/extension" ]; then
