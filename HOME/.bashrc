@@ -5,7 +5,6 @@ case $- in
 esac
 
 source /etc/skel/.bashrc
-export PATH="$HOME/.local/bin:$PATH"
 source $HOME/.asdf/asdf.sh
 
 # ROS2
@@ -29,7 +28,7 @@ if [ -d "/opt/ros" ]; then
   #fi
   # ROS2 analysis https://tier4.github.io/CARET_doc/
   # source ~/ros_ws/caret/install/local_setup.bash
-  # source ~/ros_ws/gsm8.iv.caret/install/local_setup.bash
+  # source ~/ros_ws/x2.caret/install/local_setup.bash
   # export ROS_TRACE_DIR=~/out/caret
   # export LD_PRELOAD=$(readlink -f ~/ros_ws/caret/install/caret_trace/lib/libcaret.so)
   # export CARET_IGNORE_NODES="/rviz*"
