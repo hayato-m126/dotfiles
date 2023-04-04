@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mkdir -p ~/.ssh
+mkdir -p ~/.ssh/conf.d
 mkdir -p ~/.config/fish
 mkdir -p ~/.config/terminator/plugins
 mkdir -p ~/.config/git
