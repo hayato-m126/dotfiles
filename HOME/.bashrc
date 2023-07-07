@@ -55,6 +55,10 @@ export PATH=$GOPATH/bin:$PATH
 #export GOSUMDB=off
 #export GOPROXY=direct
 
+# python, poetry
+# https://stackoverflow.com/questions/74438817/poetry-failed-to-unlock-the-collection
+export PYTHON_KEYRING_BACKEND=keyring.backends.null.Keyring
+
 # luanch fish
 if [ -z "$FISH_VERSION" ]; then
   command -v fish > /dev/null 2>&1 && exec fish
