@@ -1,5 +1,5 @@
-aws-sam-cli 1.93.0
-awscli 2.13.4
+aws-sam-cli 1.96.0
+awscli 2.13.15
 direnv 2.32.3
 fzf 0.42.0
 ghq 1.4.2
