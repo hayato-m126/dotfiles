@@ -8,7 +8,7 @@
   root = ~/ros_ws/x1/src
   root = ~/ros_ws/xx1/src
   root = ~/ros_ws/x2/src
-  root = ~/ros_ws/x2.j6/src
+  root = ~/ros_ws/x2.gsm8/src
   root = ~/ghq
 [filter "lfs"]
 	clean = git-lfs clean -- %f
