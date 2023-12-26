@@ -1,5 +1,5 @@
-aws-sam-cli 1.103.0
-awscli 2.14.5
+aws-sam-cli 1.105.0
+awscli 2.15.4
 direnv 2.33.0
 fzf 0.44.1
 ghq 1.4.2
@@ -7,4 +7,4 @@ golang 1.20.4
 nodejs 18.15.0
 python system
 ripgrep 14.0.3
-yq 4.40.4
+yq 4.40.5
