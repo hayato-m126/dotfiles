@@ -17,5 +17,9 @@ indent_size = 4
 [.go]
 indent_style = tab
 
+[.rs]
+# https://users.rust-lang.org/t/what-do-you-think-about-two-space-indenting/51455/3
+indent_size = 4
+
 [Makefile]
 indent_style = tab

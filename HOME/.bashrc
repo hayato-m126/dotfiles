@@ -6,6 +6,7 @@ esac
 
 source /etc/skel/.bashrc
 source $HOME/.asdf/asdf.sh
+source $HOME/.cargo/env
 
 # ROS2
 if [ -d "/opt/ros" ]; then
@@ -27,13 +28,6 @@ if [ -d "/opt/ros" ]; then
   #if [ -d "$HOME/ros_ws/extension" ]; then
   #  source $HOME/ros_ws/extension/install/local_setup.bash
   #fi
-  # ROS2 analysis https://tier4.github.io/CARET_doc/
-  # source ~/ros_ws/caret/install/local_setup.bash
-  # source ~/ros_ws/x2.caret/install/local_setup.bash
-  # export ROS_TRACE_DIR=~/out/caret
-  # export LD_PRELOAD=$(readlink -f ~/ros_ws/caret/install/caret_trace/lib/libcaret.so)
-  # export CARET_IGNORE_NODES="/rviz*"
-  # export CARET_IGNORE_TOPICS="/clock:/parameter_events"
 fi
 
 if command -v ccache > /dev/null 2>&1; then
@@ -58,6 +52,10 @@ export PATH=$GOPATH/bin:$PATH
 # python, poetry
 # https://stackoverflow.com/questions/74438817/poetry-failed-to-unlock-the-collection
 export PYTHON_KEYRING_BACKEND=keyring.backends.null.Keyring
+
+# mojo
+# export MODULAR_HOME="$HOME/.modular"
+# export PATH="$MODULAR_HOME/pkg/packages.modular.com_mojo/bin:$PATH"
 
 # luanch fish
 if [ -z "$FISH_VERSION" ]; then
