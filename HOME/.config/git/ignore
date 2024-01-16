@@ -12,3 +12,6 @@ browse.vc.db-wal
 
 # dictionary
 .cspell.json
+
+# python cache
+__pycache__/
