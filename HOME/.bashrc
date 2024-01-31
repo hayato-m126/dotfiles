@@ -5,7 +5,6 @@ case $- in
 esac
 
 source /etc/skel/.bashrc
-source $HOME/.asdf/asdf.sh
 source $HOME/.cargo/env
 
 # ROS2
