@@ -19,3 +19,4 @@ set PATH $PATH /home/hyt/.local/bin
 if type -q direnv
   eval (direnv hook fish)
 end
+~/.local/bin/mise activate fish | source
