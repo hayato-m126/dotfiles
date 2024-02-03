@@ -6,6 +6,7 @@ esac
 
 source /etc/skel/.bashrc
 source $HOME/.cargo/env
+source $HOME/.rye/env
 
 # ROS2
 if [ -d "/opt/ros" ]; then
