@@ -21,6 +21,9 @@ if [ -d "/opt/ros" ]; then
     export CYCLONEDDS_URI=file://$HOME/.ros/cyclonedds_humble.xml
     source /opt/ros/humble/setup.bash
   fi
+else
+  # Do not enable rye in ros development environment
+  source $HOME/.rye/env
 fi
 
 if command -v ccache > /dev/null 2>&1; then
