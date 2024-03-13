@@ -1,6 +1,6 @@
 [tools]
 node = "20"
-fzf = "0.46"
+fzf = "0"
 yq = "4.42"
 ripgrep = "14"
 ghq = "1"
