@@ -6,10 +6,11 @@
 [ghq]
   root = ~/ros_ws/awf/src
   root = ~/ros_ws/aw_msg/src
+  root = ~/ros_ws/converter/src
   root = ~/ros_ws/x1/src
+  root = ~/ros_ws/eve/src
   root = ~/ros_ws/xx1/src
   root = ~/ros_ws/x2/src
-  root = ~/ros_ws/x2.gsm8/src
   root = ~/ghq
 [filter "lfs"]
 	clean = git-lfs clean -- %f

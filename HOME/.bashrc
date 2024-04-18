@@ -43,10 +43,6 @@ export PATH=$GOPATH/bin:$PATH
 #export GOSUMDB=off
 #export GOPROXY=direct
 
-# python, poetry
-# https://stackoverflow.com/questions/74438817/poetry-failed-to-unlock-the-collection
-export PYTHON_KEYRING_BACKEND=keyring.backends.null.Keyring
-
 # mojo
 # export MODULAR_HOME="$HOME/.modular"
 # export PATH="$MODULAR_HOME/pkg/packages.modular.com_mojo/bin:$PATH"
