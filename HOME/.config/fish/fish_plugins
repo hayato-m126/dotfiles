@@ -3,7 +3,7 @@ edc/bass
 jethrokuan/fzf
 rafaelrinaldi/pure
 decors/fish-ghq
-kenji-miyake/reload.fish
-kenji-miyake/colcon-abbr.fish
-kenji-miyake/colcon-extensions.fish
-kenji-miyake/vcd.fish
+#kenji-miyake/reload.fish
+#kenji-miyake/colcon-abbr.fish
+#kenji-miyake/colcon-extensions.fish
+#kenji-miyake/vcd.fish
