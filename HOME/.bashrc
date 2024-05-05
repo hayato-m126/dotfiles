@@ -5,8 +5,11 @@ case $- in
 esac
 
 source /etc/skel/.bashrc
-source $HOME/.cargo/env
 source $HOME/.rye/env
+
+if [ -d "$HOME/.cargo" ]; then
+  source $HOME/.cargo/env
+fi
 
 # ROS2
 if [ -d "/opt/ros" ]; then
