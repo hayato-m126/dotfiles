@@ -1,5 +1,5 @@
 [tools]
-node = "20"
+node = "22"
 fzf = "0"
 ripgrep = "14"
 ghq = "1"
