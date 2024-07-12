@@ -5,10 +5,10 @@
   insteadOf = https://github.com/
 [ghq]
   root = ~/ros_ws/awf/src
-  root = ~/ros_ws/aw_msg/src
-  root = ~/ros_ws/pilot-auto/src
+  root = ~/ros_ws/unlabeled/src
   root = ~/ros_ws/xx1/src
   root = ~/ros_ws/x2/src
+  root = ~/ros_ws/planning_control/src
   root = ~/ghq
 [filter "lfs"]
 	clean = git-lfs clean -- %f
