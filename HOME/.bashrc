@@ -43,12 +43,6 @@ export LD_LIBRARY_PATH="/usr/local/libtorch/lib:$LD_LIBRARY_PATH"
 # golang
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH
-#export GOSUMDB=off
-#export GOPROXY=direct
-
-# mojo
-# export MODULAR_HOME="$HOME/.modular"
-# export PATH="$MODULAR_HOME/pkg/packages.modular.com_mojo/bin:$PATH"
 
 # luanch fish
 if [ -z "$FISH_VERSION" ]; then
