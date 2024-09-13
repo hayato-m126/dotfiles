@@ -15,3 +15,8 @@ browse.vc.db-wal
 
 # python cache
 __pycache__/
+
+# Mac General
+.DS_Store
+.AppleDouble
+.LSOverride
