@@ -24,12 +24,3 @@ vscodeでgit commitで常にsinged-offをつける
 <https://qiita.com/ItSANgo/items/135f91c08cf8380cab82>
 
 一度設定したら、vscodeの同期機能で同期される。
-
-## macの場合
-
-macのデフォルトのシェルはzshなので、ubuntuと同じbashに直しておくことで、共通化する。
-実際はbashからfishを呼んでいる
-
-```shell
-chsh -s /bin/bash
-```
