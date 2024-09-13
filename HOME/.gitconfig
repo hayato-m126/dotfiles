@@ -20,3 +20,5 @@
 	defaultbranch = main
 [rerere]
 	enabled = true
+[core]
+  editor = nano
