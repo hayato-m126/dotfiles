@@ -26,3 +26,15 @@
 ├── global.conf # オススメな設定
 └── config      # conf.d配下を読み込ませる
 ```
+
+## githubへのssh接続時にstrict checkingで引っかかる
+
+```shell
+hyt@MBA-M3 ~/.ssh> ssh -T git@github.com
+No ED25519 host key is known for github.com and you have requested strict checking.
+Host key verification failed.
+```
+
+<https://docs.github.com/ja/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints>
+
+$HOME/.ssh/known_hostsを作って、上記の内容を入力しておけばよい。
