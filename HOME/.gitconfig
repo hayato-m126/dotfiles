@@ -12,13 +12,13 @@
   root = ~/ros_ws/planning_control/src
   root = ~/ghq
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
 [init]
-	defaultbranch = main
+  defaultbranch = main
 [rerere]
-	enabled = true
+  enabled = true
 [core]
   editor = nano
