@@ -5,7 +5,7 @@
 ## environment
 
 - Ubuntu 22.04 / 24.04
-- macOS Sonoma
+- macOS Sonoma / Sequoia
 
 ## usage
 
