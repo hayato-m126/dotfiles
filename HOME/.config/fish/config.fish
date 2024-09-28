@@ -19,4 +19,6 @@ end
 # pnpm end
 
 # alias
-alias docker='podman'
+if command -q podman
+  alias docker podman
+end
