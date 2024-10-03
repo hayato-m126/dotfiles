@@ -5,7 +5,6 @@ case $- in
 esac
 
 source /etc/skel/.bashrc
-source $HOME/.rye/env
 
 if [ -d "$HOME/.cargo" ]; then
   source $HOME/.cargo/env
