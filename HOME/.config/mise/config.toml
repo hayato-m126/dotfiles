@@ -2,5 +2,4 @@
 node = "22"
 ghq = "latest"
 awscli = "latest"
-aws-sam-cli = "latest"
 hadolint = "latest"

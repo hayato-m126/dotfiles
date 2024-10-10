@@ -4,13 +4,10 @@
 [url "git@github.com:"]
   insteadOf = https://github.com/
 [ghq]
-  root = ~/ros_ws/awf/src
-  root = ~/ros_ws/t4_dataset/src
+  root = ~/ros_ws/unlabeled/src
   root = ~/ros_ws/converter/src
   root = ~/ros_ws/xx1/src
   root = ~/ros_ws/x2/src
-  root = ~/ros_ws/eve/src
-  root = ~/ros_ws/planning_control/src
   root = ~/ghq
 [filter "lfs"]
   clean = git-lfs clean -- %f
