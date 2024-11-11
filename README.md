@@ -14,8 +14,9 @@
 
 ## reference
 
-ssh設定は以下のものを参考にした
-https://gitlab.com/clear-code/ssh.d
+- <https://gitlab.com/clear-code/ssh.d>
+- <https://qiita.com/kenji-miyake/items/06b8c3807bef0ba5c451#fish-shell>
+- <https://github.com/kenji-miyake/dotfiles>
 
 ## vscodeのgit設定
 

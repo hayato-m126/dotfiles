@@ -1,3 +1,5 @@
+alias bash='env FISH_VERSION=$FISH_VERSION bash'
+
 # Set $SHELL for venv in VSCode
 set SHELL (which fish)
 
