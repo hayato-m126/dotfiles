@@ -26,9 +26,6 @@ if [ -d "/opt/ros" ]; then
   fi
 fi
 
-source /home/hyt/.dlr2-complete.bash
-source /home/hyt/.dlr2-analyzer-complete.bash
-
 if command -v ccache > /dev/null 2>&1; then
   export CC="/usr/lib/ccache/gcc"
   export CXX="/usr/lib/ccache/g++"
