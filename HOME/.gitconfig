@@ -19,3 +19,6 @@
   enabled = true
 [core]
   editor = nano
+
+# [includeIf "gitdir:~/ghq/github.com/${sub_account}/"]
+#   path = ~/.gitconfig_sub
