@@ -4,3 +4,6 @@ ghq = "latest"
 awscli = "latest"
 hadolint = "latest"
 fd = "latest"
+
+[settings]
+experimental = true
