@@ -43,6 +43,8 @@ export LD_LIBRARY_PATH="/usr/local/libtorch/lib:$LD_LIBRARY_PATH"
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH
 
+export ART_HOST_BINDING=127.0.0.1:
+
 # luanch fish
 if [ -z "$FISH_VERSION" ]; then
   command -v fish > /dev/null 2>&1 && exec fish
