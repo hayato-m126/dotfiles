@@ -1,6 +1,6 @@
 # dotfiles
 
-設定ファイルを管理するリポジトリ
+Repository for managing configuration files
 
 ## environment
 
@@ -9,8 +9,8 @@
 
 ## usage
 
-1. HOMEフォルダ内に、設定ファイルを置く。
-2. ./install.shで設定を反映させる。
+1. Place configuration files in the HOME directory
+2. Apply settings using ./install.sh
 
 ## reference
 
@@ -18,10 +18,10 @@
 - <https://qiita.com/kenji-miyake/items/06b8c3807bef0ba5c451#fish-shell>
 - <https://github.com/kenji-miyake/dotfiles>
 
-## vscodeのgit設定
+## VSCode Git Settings
 
-vscodeでgit commitで常にsinged-offをつける
+Configure VSCode to always add signed-off-by to git commits
 
 <https://qiita.com/ItSANgo/items/135f91c08cf8380cab82>
 
-一度設定したら、vscodeの同期機能で同期される。
+Once configured, these settings will be synchronized through VSCode's sync feature.
