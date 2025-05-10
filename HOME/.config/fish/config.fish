@@ -1,4 +1,5 @@
 alias bash='env FISH_VERSION=$FISH_VERSION bash'
+alias cursor='~/AppImage/Cursor.AppImage'
 
 # Set $SHELL for venv in VSCode
 set SHELL (which fish)
