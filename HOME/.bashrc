@@ -36,7 +36,7 @@ export PATH="/usr/local/cuda/bin:$PATH"
 export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
 
 # C++ torch, for autoware
-# If the line below is valid, pytorch instalation will be failed. import torch shows msgs "libtorch_cuda_cpp.so: undefined symbol"
+# If the line below is valid, pytorch installation will be failed. import torch shows msgs "libtorch_cuda_cpp.so: undefined symbol"
 export LD_LIBRARY_PATH="/usr/local/libtorch/lib:$LD_LIBRARY_PATH"
 
 # golang
@@ -45,7 +45,7 @@ export PATH=$GOPATH/bin:$PATH
 
 export ART_HOST_BINDING=127.0.0.1:
 
-# luanch fish
+# launch fish
 if [ -z "$FISH_VERSION" ]; then
   command -v fish > /dev/null 2>&1 && exec fish
 fi
