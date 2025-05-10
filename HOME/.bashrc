@@ -45,6 +45,9 @@ export PATH=$GOPATH/bin:$PATH
 
 export ART_HOST_BINDING=127.0.0.1:
 
+# Fix the binary file name as Cursor.AppImage
+alias cursor="~/AppImage/Cursor.AppImage"
+
 # launch fish
 if [ -z "$FISH_VERSION" ]; then
   command -v fish > /dev/null 2>&1 && exec fish
