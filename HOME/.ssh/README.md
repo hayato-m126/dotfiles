@@ -1,33 +1,32 @@
-# sshのオススメ設定集
+# Recommended SSH Configuration Collection
 
-## 使い方
+## Usage
 
 ```shell
 % git clone https://gitlab.com/clear-code/ssh.d.git ~/.ssh
 ```
 
-すでにsshを運用中の場合、以下のようにすると既存の設定を自動的に引き継ぐ形でインストールできます。
+If you are already using SSH, you can install while automatically inheriting existing settings as follows:
 
 ```shell
 % curl https://gitlab.com/clear-code/ssh.d/-/raw/main/install.sh | bash
 ```
 
-## カスタマイズ
+## Customization
 
-`~/.ssh/conf.d`配下に任意の設定ファイル(拡張子が`.conf`)を配置すると
-適用されます。
+Place any configuration files (with `.conf` extension) under `~/.ssh/conf.d` to apply them.
 
 ```shell
 .
 ├── LICENSE
 ├── README.md
-├── conf.d      # 設定ファイル置き場
-│   └── template.conf # サンプル設定
-├── global.conf # オススメな設定
-└── config      # conf.d配下を読み込ませる
+├── conf.d      # Configuration files directory
+│   └── template.conf # Sample configuration
+├── global.conf # Recommended settings
+└── config      # Loads files from conf.d
 ```
 
-## githubへのssh接続時にstrict checkingで引っかかる
+## When SSH connection to GitHub fails due to strict checking
 
 ```shell
 hyt@MBA-M3 ~/.ssh> ssh -T git@github.com
@@ -37,4 +36,4 @@ Host key verification failed.
 
 <https://docs.github.com/ja/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints>
 
-$HOME/.ssh/known_hostsを作って、上記の内容を入力しておけばよい。
+Create $HOME/.ssh/known_hosts and input the content from the above link.

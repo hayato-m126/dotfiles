@@ -22,7 +22,7 @@ if [ -d "/opt/ros" ]; then
   # source
   if [ -d "/opt/ros/humble" ]; then
     export CYCLONEDDS_URI=file://$HOME/.ros/cyclonedds_humble.xml
-    source /opt/ros/humble/setup.bash
+    #source /opt/ros/humble/setup.bash
   fi
 fi
 
