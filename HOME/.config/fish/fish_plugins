@@ -3,7 +3,7 @@ edc/bass
 jethrokuan/fzf
 rafaelrinaldi/pure
 decors/fish-ghq
-# 以降の行はansible でROSを使うシステムの場合に行を追加するようにする
+# The following lines should be added when using ROS
 # kenji-miyake/reload.fish
 # kenji-miyake/colcon-abbr.fish
 # kenji-miyake/colcon-extensions.fish
