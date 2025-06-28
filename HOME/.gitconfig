@@ -4,9 +4,6 @@
 [url "git@github.com:"]
   insteadOf = https://github.com/
 [ghq]
-  root = ~/ros_ws/vanilla/src
-  root = ~/ros_ws/xx1/src
-  root = ~/ros_ws/x2/src
   root = ~/ghq
 [filter "lfs"]
   clean = git-lfs clean -- %f
@@ -19,6 +16,3 @@
   enabled = true
 [core]
   editor = nano
-
-# [includeIf "gitdir:~/ghq/github.com/${sub_account}/"]
-#   path = ~/.gitconfig_sub
