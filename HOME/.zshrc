@@ -1,4 +1,6 @@
-source $HOME/.cargo/env
+. "$HOME/.local/bin/env"
+if [ -d "$HOME/.cargo" ]; then
+  source $HOME/.cargo/env
+fi
 export DOCKER_DEFAULT_PLATFORM=linux/amd64
-export ART_HOST_BINDING=127.0.0.1:
-fish
+command -v fish > /dev/null 2>&1 && exec fish
