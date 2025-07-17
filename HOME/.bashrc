@@ -57,3 +57,8 @@ fi
 if [ -z "$FISH_VERSION" ]; then
   command -v fish > /dev/null 2>&1 && exec fish
 fi
+
+# When not using fish, activate mise in bash.
+if test -f ~/.local/bin/mise
+  eval "$(~/.local/bin/mise activate bash)"
+fi
