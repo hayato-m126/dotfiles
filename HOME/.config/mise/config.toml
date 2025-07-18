@@ -10,6 +10,7 @@ pnpm = "10"
 ollama = "latest"
 actionlint = "latest"
 usage = "latest"
+azure-cli = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["python"]
