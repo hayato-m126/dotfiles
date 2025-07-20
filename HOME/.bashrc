@@ -48,7 +48,17 @@ export ART_HOST_BINDING=127.0.0.1:
 # open current directory in Cursor
 alias cur='~/AppImage/Cursor.AppImage . > /dev/null 2>&1 & disown'
 
+# if remote access, change Ghostty background color
+if [ -n "$SSH_CONNECTION" ]; then
+    printf '\e]11;#204022\a'
+fi
+
 # launch fish
 if [ -z "$FISH_VERSION" ]; then
   command -v fish > /dev/null 2>&1 && exec fish
+fi
+
+# When not using fish, activate mise in bash.
+if test -f ~/.local/bin/mise
+  eval "$(~/.local/bin/mise activate bash)"
 fi
