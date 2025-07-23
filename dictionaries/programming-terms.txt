@@ -87,6 +87,7 @@ shellcheck
 shellenv
 shfmt
 SHLVL
+snfv
 Sonoma
 sqlalchemy
 sqlitebrowser
