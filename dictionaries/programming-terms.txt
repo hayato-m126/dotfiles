@@ -8,6 +8,7 @@ autoclean
 autodetermine
 autofix
 awscli
+bazelisk
 beautifulsoup
 blockinfile
 byobu
