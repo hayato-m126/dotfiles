@@ -18,6 +18,7 @@ if [ -d "/opt/ros" ]; then
   export ROS_DOMAIN_ID=77
   export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
   export RCUTILS_COLORIZED_OUTPUT=1
+  export LD_LIBRARY_PATH="/usr/local/libtorch/lib:$LD_LIBRARY_PATH"
 
   # source
   if [ -d "/opt/ros/humble" ]; then
@@ -34,10 +35,6 @@ fi
 # cuda
 export PATH="/usr/local/cuda/bin:$PATH"
 export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
-
-# C++ torch, for autoware
-# If the line below is valid, pytorch installation will be failed. import torch shows msgs "libtorch_cuda_cpp.so: undefined symbol"
-export LD_LIBRARY_PATH="/usr/local/libtorch/lib:$LD_LIBRARY_PATH"
 
 # golang
 export GOPATH=$HOME/go

@@ -5,7 +5,11 @@ charliermarsh
 danielrichter
 dpage
 Hayato
+jethrokuan
 jorgebucaran
+kenji
+miyake
 Mizushima
 phoerious
+rafaelrinaldi
 yesoreyeram
