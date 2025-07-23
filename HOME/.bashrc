@@ -6,6 +6,9 @@ esac
 
 source /etc/skel/.bashrc
 
+# bazel
+alias bazel="bazelisk"
+
 if [ -d "$HOME/.cargo" ]; then
   source $HOME/.cargo/env
 fi
