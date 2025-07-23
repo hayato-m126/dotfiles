@@ -48,9 +48,6 @@ export PATH=$GOPATH/bin:$PATH
 
 export ART_HOST_BINDING=127.0.0.1:
 
-# open current directory in Cursor
-alias cur='~/AppImage/Cursor.AppImage . > /dev/null 2>&1 & disown'
-
 # if remote access, change Ghostty background color
 if [ -n "$SSH_CONNECTION" ]; then
     printf '\e]11;#204022\a'
