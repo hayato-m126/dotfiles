@@ -6,6 +6,7 @@ mkdir -p ~/.config/terminator/plugins
 mkdir -p ~/.config/git
 mkdir -p ~/.config/mise
 mkdir -p ~/.ros
+mkdir -p ~/.config/ghostty
 
 SCRIPT_DIR=$(cd $(dirname $0); pwd)
 
