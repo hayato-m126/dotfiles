@@ -1,6 +1,6 @@
 macos-option-as-alt = true
 keybind = alt+left=unbind
 keybind = alt+right=unbind
-# cmd+left and cmd+right are hooked by the system
-keybind = "cmd+ctrl+up=scroll_to_top"
-keybind = "cmd+ctrl+down=scroll_to_bottom"
+# cmd+shift+left and cmd+shift+right are hooked by the system
+keybind = super+ctrl+up=scroll_to_top
+keybind = super+ctrl+down=scroll_to_bottom
