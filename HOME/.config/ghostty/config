@@ -1,3 +1,12 @@
+# cmd+left and cmd+right are hooked by the system
+# page top cmd+↑
+# page bottom cmd+↓
+
+# ghostty +show-config --default --docs
+# ghostty +list-keybinds --default | grep scroll
+
+# mac
 macos-option-as-alt = true
+# for zellij
 keybind = alt+left=unbind
 keybind = alt+right=unbind

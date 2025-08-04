@@ -47,6 +47,8 @@ hwclock
 insertafter
 isort
 keepassxc
+keybind
+keybinds
 keymap
 keyrings
 KHTML
