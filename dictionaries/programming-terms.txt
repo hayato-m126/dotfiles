@@ -8,6 +8,7 @@ autoclean
 autodetermine
 autofix
 awscli
+bazel
 bazelisk
 beautifulsoup
 blockinfile
@@ -25,6 +26,7 @@ dconf
 dearmour
 debugpy
 defaultbranch
+devcontainers
 DISTRO
 Dokerfile
 dotenvx

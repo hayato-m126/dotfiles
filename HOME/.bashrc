@@ -43,7 +43,9 @@ export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH
 
-export ART_HOST_BINDING=127.0.0.1:
+if [ -f "$HOME/.secrets/env.sh" ]; then
+  source $HOME/.secrets/env.sh
+fi
 
 # if remote access, change Ghostty background color
 if [ -n "$SSH_CONNECTION" ]; then
