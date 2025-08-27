@@ -7,7 +7,18 @@ esac
 source /etc/skel/.bashrc
 
 # zstd
-alias taz='tar -I zstd -cvf'
+taz() {
+  if [ $# -ne 1 ]; then
+    echo "command to compress directory using zstd"
+    echo "Usage: taz <dir>"
+    return 1
+  fi
+
+  dir="$1"
+  archive="${dir}.tar.zst"
+  tar -I zstd -cvf "$archive" "$dir"
+}
+
 alias untaz='tar -I zstd -xvf'
 
 # bazel
