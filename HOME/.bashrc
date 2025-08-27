@@ -6,6 +6,10 @@ esac
 
 source /etc/skel/.bashrc
 
+# zstd
+alias taz='tar -I zstd -cvf'
+alias untaz='tar -I zstd -xvf'
+
 # bazel
 alias bazel="bazelisk"
 
