@@ -1,11 +1,9 @@
 [tools]
 node = "22.14.0"
 ghq = "latest"
-awscli = "latest"
 hadolint = "latest"
 fd = "latest"
 bun = "1"
-go = "1.22.8"
 pnpm = "10"
 actionlint = "latest"
 usage = "latest"
