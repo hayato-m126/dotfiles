@@ -1,4 +1,5 @@
 alias bash='env FISH_VERSION=$FISH_VERSION bash'
+alias zsh='env FISH_VERSION=$FISH_VERSION zsh'
 
 # zstd
 function taz
