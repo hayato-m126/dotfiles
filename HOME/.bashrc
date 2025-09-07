@@ -24,10 +24,6 @@ alias untaz='tar -I zstd -xvf'
 # bazel
 alias bazel="bazelisk"
 
-if [ -d "$HOME/.cargo" ]; then
-  source $HOME/.cargo/env
-fi
-
 # ROS2
 if [ -d "/opt/ros" ]; then
   source $HOME/.ros/setup.sh
@@ -41,10 +37,6 @@ fi
 # cuda
 export PATH="/usr/local/cuda/bin:$PATH"
 export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
-
-# golang
-export GOPATH=$HOME/go
-export PATH=$GOPATH/bin:$PATH
 
 if [ -f "$HOME/.secrets/env.sh" ]; then
   source $HOME/.secrets/env.sh
@@ -61,6 +53,6 @@ if [ -z "$FISH_VERSION" ]; then
 fi
 
 # When not using fish, activate mise in bash.
-if test -f ~/.local/bin/mise
+if test -f ~/.local/bin/mise; then
   eval "$(~/.local/bin/mise activate bash)"
 fi
