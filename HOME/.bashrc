@@ -6,24 +6,6 @@ esac
 
 source /etc/skel/.bashrc
 
-# zstd
-taz() {
-  if [ $# -ne 1 ]; then
-    echo "command to compress directory using zstd"
-    echo "Usage: taz <dir>"
-    return 1
-  fi
-
-  dir="$1"
-  archive="${dir}.tar.zst"
-  tar -I zstd -cvf "$archive" "$dir"
-}
-
-alias untaz='tar -I zstd -xvf'
-
-# bazel
-alias bazel="bazelisk"
-
 # ROS2
 if [ -d "/opt/ros" ]; then
   source $HOME/.ros/setup.sh
@@ -48,7 +30,7 @@ if [ -n "$SSH_CONNECTION" ]; then
 fi
 
 # launch fish
-if [ -z "$FISH_VERSION" ]; then
+if [ -z "$FISH_VERSION" ] && [ "$USE_DEVCONTAINER" != "true" ]; then
   command -v fish > /dev/null 2>&1 && exec fish
 fi
 
@@ -56,3 +38,21 @@ fi
 if test -f ~/.local/bin/mise; then
   eval "$(~/.local/bin/mise activate bash)"
 fi
+
+# zstd
+taz() {
+  if [ $# -ne 1 ]; then
+    echo "command to compress directory using zstd"
+    echo "Usage: taz <dir>"
+    return 1
+  fi
+
+  dir="$1"
+  archive="${dir}.tar.zst"
+  tar -I zstd -cvf "$archive" "$dir"
+}
+
+alias untaz='tar -I zstd -xvf'
+
+# bazel
+alias bazel="bazelisk"
