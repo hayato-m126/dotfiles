@@ -6,6 +6,8 @@ esac
 
 source /etc/skel/.bashrc
 
+export BROWSER="'/mnt/c/Program Files (x86)/Microsoft/Edge/Application/msedge.exe'"
+
 # ROS2
 if [ -d "/opt/ros" ]; then
   source $HOME/.ros/setup.sh
