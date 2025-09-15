@@ -58,3 +58,4 @@ alias untaz='tar -I zstd -xvf'
 
 # bazel
 alias bazel="bazelisk"
+eval "$(zoxide init bash)"
