@@ -8,6 +8,11 @@ source /etc/skel/.bashrc
 
 export BROWSER="'/mnt/c/Program Files (x86)/Microsoft/Edge/Application/msedge.exe'"
 
+# rust
+if [ -f "$HOME/.cargo/env" ]; then
+  source $HOME/.cargo/env
+fi
+
 # ROS2
 if [ -d "/opt/ros" ]; then
   source $HOME/.ros/setup.sh
