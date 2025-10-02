@@ -66,3 +66,10 @@ alias bazel="bazelisk"
 if command -v zoxide > /dev/null 2>&1; then
   eval "$(zoxide init bash)"
 fi
+
+alias gitca="
+  git reset --hard HEAD && \
+  git clean -df && \
+  git submodule foreach git reset --hard HEAD && \
+  git submodule foreach git clean -df
+"

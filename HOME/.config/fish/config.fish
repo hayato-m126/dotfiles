@@ -1,6 +1,13 @@
 alias bash='env FISH_VERSION=$FISH_VERSION bash'
 alias zsh='env FISH_VERSION=$FISH_VERSION zsh'
 
+alias gitca="
+  git reset --hard HEAD && \
+  git clean -df && \
+  git submodule foreach git reset --hard HEAD && \
+  git submodule foreach git clean -df
+"
+
 # zstd
 function taz
   if test (count $argv) -ne 1
