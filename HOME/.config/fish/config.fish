@@ -1,28 +1,6 @@
 alias bash='env FISH_VERSION=$FISH_VERSION bash'
 alias zsh='env FISH_VERSION=$FISH_VERSION zsh'
 
-function gitca
-  git reset --hard HEAD
-  git clean -df
-  git submodule foreach git reset --hard HEAD
-  git submodule foreach git clean -df
-end
-
-# zstd
-function taz
-  if test (count $argv) -ne 1
-    echo "command to compress directory using zstd"
-    echo "Usage: taz <dir>"
-    return 1
-  end
-
-  set dir $argv[1]
-  set archive "$dir.tar.zst"
-
-  tar -I zstd -cvf $archive $dir
-end
-alias untaz='tar -I zstd -xvf'
-
 # Set $SHELL for venv in VSCode
 set SHELL (which fish)
 
@@ -42,6 +20,9 @@ if not string match -q -- $PNPM_HOME $PATH
   set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
+
 if command -q zoxide
     zoxide init fish | source
 end
+
+abbr -a -- untaz 'tar -I zstd -xvf'
