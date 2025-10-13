@@ -6,7 +6,9 @@ esac
 
 source /etc/skel/.bashrc
 
-export BROWSER="'/mnt/c/Program Files (x86)/Microsoft/Edge/Application/msedge.exe'"
+if [[ -d /run/WSL ]]; then
+    export BROWSER="'/mnt/c/Program Files (x86)/Microsoft/Edge/Application/msedge.exe'"
+fi
 
 # rust
 if [ -f "$HOME/.cargo/env" ]; then
