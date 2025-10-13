@@ -3,20 +3,16 @@
   <Domain Id="any">
     <General>
       <Interfaces>
-        <NetworkInterface autodetermine="true" priority="default" multicast="default" />
+        <NetworkInterface autodetermine="false" name="lo" priority="default" multicast="default" />
       </Interfaces>
-      <AllowMulticast>spdp</AllowMulticast>
+      <AllowMulticast>default</AllowMulticast>
       <MaxMessageSize>65500B</MaxMessageSize>
     </General>
     <Internal>
+      <SocketReceiveBufferSize min="10MB"/>
       <Watermarks>
         <WhcHigh>500kB</WhcHigh>
       </Watermarks>
-      <SocketReceiveBufferSize min="20MB"/>
     </Internal>
-    <Tracing>
-      <Verbosity>config</Verbosity>
-      <OutputFile>/tmp/cyclonedds.log</OutputFile>
-    </Tracing>
   </Domain>
 </CycloneDDS>
