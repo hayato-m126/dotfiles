@@ -55,6 +55,7 @@ keymap
 keyrings
 KHTML
 kolourpaint
+lazygit
 levelname
 libcap2
 libcudnn
