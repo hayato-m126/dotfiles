@@ -1,12 +1,12 @@
 #!/bin/bash
 
-mkdir -p ~/.ssh/conf.d
 mkdir -p ~/.config/fish
-mkdir -p ~/.config/terminator/plugins
+mkdir -p ~/.config/ghostty
 mkdir -p ~/.config/git
 mkdir -p ~/.config/mise
+mkdir -p ~/.config/terminator/plugins
 mkdir -p ~/.ros
-mkdir -p ~/.config/ghostty
+mkdir -p ~/.ssh/conf.d
 
 SCRIPT_DIR=$(cd $(dirname $0); pwd)
 
