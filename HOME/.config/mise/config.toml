@@ -11,6 +11,10 @@ bazelisk = "latest"
 github-cli = "latest"
 zellij = "latest"
 lazygit = "latest"
+fzf = "latest"
+ripgrep = "latest"
+zoxide = "latest"
+jq = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["python"]
