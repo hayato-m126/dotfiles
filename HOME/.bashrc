@@ -75,3 +75,11 @@ alias gitca="
   git submodule foreach git reset --hard HEAD && \
   git submodule foreach git clean -df
 "
+
+__fzf_history_search() {
+    local result
+    result=$(history | tac | awk '{$1=""; print substr($0,2)}' | fzf) &&
+    READLINE_LINE="$result"
+    READLINE_POINT=${#READLINE_LINE}
+}
+bind -x '"\C-r": __fzf_history_search'
