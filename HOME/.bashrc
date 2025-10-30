@@ -85,7 +85,7 @@ __fzf_history_search() {
 bind -x '"\C-r": __fzf_history_search'
 
 
-ghq-cd() {
+__ghq_cd() {
   # ghqで管理しているリポジトリ一覧からfzfで選択し、そのディレクトリへ移動
   local repo_dir
   repo_dir=$(ghq list -p | fzf)
@@ -93,4 +93,4 @@ ghq-cd() {
     cd "$repo_dir" || return 1
   fi
 }
-bind '"\C-g":"ghq-cd\n"'
+bind -x '"\C-g": __ghq_cd'
