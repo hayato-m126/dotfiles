@@ -83,3 +83,14 @@ __fzf_history_search() {
     READLINE_POINT=${#READLINE_LINE}
 }
 bind -x '"\C-r": __fzf_history_search'
+
+
+ghq-cd() {
+  # ghqで管理しているリポジトリ一覧からfzfで選択し、そのディレクトリへ移動
+  local repo_dir
+  repo_dir=$(ghq list -p | fzf)
+  if [[ -n "$repo_dir" ]]; then
+    cd "$repo_dir" || return 1
+  fi
+}
+bind '"\C-g":"ghq-cd\n"'
