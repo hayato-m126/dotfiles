@@ -2,3 +2,4 @@
 cspell
 @devcontainers/cli
 @github/copilot
+@fission-ai/openspec@latest
