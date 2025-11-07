@@ -16,3 +16,7 @@ indent_size = 4
 
 [*.sh]
 indent_size = 4
+
+[*.bat]
+charset = shift_jis
+end_of_line = crlf
