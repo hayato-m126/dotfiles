@@ -13,6 +13,7 @@ node = "24"
 pnpm = "10"
 ripgrep = "latest"
 usage = "latest"
+yq = "latest"
 zellij = "latest"
 zoxide = "latest"
 
