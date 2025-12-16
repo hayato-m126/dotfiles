@@ -77,7 +77,7 @@ gitca() {
 }
 
 conflict() {
-  OUTPUT_FILE="merge_conflict_resolution_$(date +%Y%m%d_%H%M%S).md"
+  OUTPUT_FILE="merge_conflict_$(date +%Y%m%d_%H%M%S).md"
 
   echo "# Merge Conflict Resolution" > "$OUTPUT_FILE"
   echo "" >> "$OUTPUT_FILE"
