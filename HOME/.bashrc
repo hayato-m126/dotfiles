@@ -85,13 +85,14 @@ conflict() {
     CONFLICTED_COUNT="$(printf '%s\n' "$CONFLICTED_FILES" | wc -l)"
   fi
 
-  echo "# Merge Conflict Resolution" > "$OUTPUT_FILE"
+  echo "# Merge Conflict" > "$OUTPUT_FILE"
   echo "" >> "$OUTPUT_FILE"
   echo "Date: $(date)" >> "$OUTPUT_FILE"
   echo "Branch: $(git branch --show-current)" >> "$OUTPUT_FILE"
   echo "" >> "$OUTPUT_FILE"
 
   echo "Conflicted files: $CONFLICTED_COUNT" >> "$OUTPUT_FILE"
+  echo "" >> "$OUTPUT_FILE"
 
   echo "## Conflicted Files" >> "$OUTPUT_FILE"
   echo '```' >> "$OUTPUT_FILE"

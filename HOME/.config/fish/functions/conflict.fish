@@ -10,6 +10,7 @@ function conflict
   echo "" >> "$OUTPUT_FILE"
 
   echo "Conflicted files: $CONFLICTED_COUNT" >> "$OUTPUT_FILE"
+  echo "" >> "$OUTPUT_FILE"
 
   echo "## Conflicted Files" >> "$OUTPUT_FILE"
   echo '```' >> "$OUTPUT_FILE"
