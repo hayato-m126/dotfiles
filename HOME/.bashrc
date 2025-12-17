@@ -78,27 +78,37 @@ gitca() {
 
 conflict() {
   OUTPUT_FILE="merge_conflict_$(date +%Y%m%d_%H%M%S).md"
+  CONFLICTED_FILES="$(git diff --name-only --diff-filter=U)"
+  if [[ -z "$CONFLICTED_FILES" ]]; then
+    CONFLICTED_COUNT=0
+  else
+    CONFLICTED_COUNT="$(printf '%s\n' "$CONFLICTED_FILES" | wc -l)"
+  fi
 
-  echo "# Merge Conflict Resolution" > "$OUTPUT_FILE"
+  echo "# Merge Conflict" > "$OUTPUT_FILE"
   echo "" >> "$OUTPUT_FILE"
   echo "Date: $(date)" >> "$OUTPUT_FILE"
   echo "Branch: $(git branch --show-current)" >> "$OUTPUT_FILE"
   echo "" >> "$OUTPUT_FILE"
 
+  echo "Conflicted files: $CONFLICTED_COUNT" >> "$OUTPUT_FILE"
+  echo "" >> "$OUTPUT_FILE"
+
   echo "## Conflicted Files" >> "$OUTPUT_FILE"
   echo '```' >> "$OUTPUT_FILE"
-  git diff --name-only --diff-filter=U >> "$OUTPUT_FILE"
+  printf '%s\n' "$CONFLICTED_FILES" >> "$OUTPUT_FILE"
   echo '```' >> "$OUTPUT_FILE"
   echo "" >> "$OUTPUT_FILE"
 
   echo "## Conflict Details" >> "$OUTPUT_FILE"
-  for file in $(git diff --name-only --diff-filter=U); do
+  while IFS= read -r file; do
+    [[ -z "$file" ]] && continue
     echo "### $file" >> "$OUTPUT_FILE"
     echo '```diff' >> "$OUTPUT_FILE"
     git diff "$file" >> "$OUTPUT_FILE"
     echo '```' >> "$OUTPUT_FILE"
     echo "" >> "$OUTPUT_FILE"
-  done
+  done <<< "$CONFLICTED_FILES"
 
   echo "Saved to: $OUTPUT_FILE"
 }
