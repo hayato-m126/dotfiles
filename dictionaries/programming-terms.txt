@@ -55,6 +55,7 @@ keymap
 keyrings
 KHTML
 kolourpaint
+lazydocker
 lazygit
 levelname
 libcap2
