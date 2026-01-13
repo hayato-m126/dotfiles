@@ -33,9 +33,41 @@ if [ -f "$HOME/.secrets/env.sh" ]; then
   source $HOME/.secrets/env.sh
 fi
 
-# if remote access, change Ghostty background color
+__set_terminal_bg() {
+  # OSC 11: set background color. (Ghostty / many terminals)
+  # Accepts colors like "#RRGGBB".
+  printf '\e]11;%s\a' "$1"
+}
+
+__is_container() {
+  # Docker / Podman / Kubernetesなどの判定。
+  # - /.dockerenv はDockerで高確率
+  # - /run/.containerenv はPodman系で使われることがある
+  # - /proc/1/cgroup には docker/containerd/kubepods 等が入ることが多い
+  # - VS Code devcontainerは環境変数が付くことがある
+  if [ -f /.dockerenv ] || [ -f /run/.containerenv ]; then
+    return 0
+  fi
+
+  if [ -r /proc/1/cgroup ] && grep -qaE '(docker|containerd|kubepods|podman)' /proc/1/cgroup; then
+    return 0
+  fi
+
+  if [ -n "$REMOTE_CONTAINERS" ] || [ -n "$VSCODE_REMOTE_CONTAINERS_SESSION" ] || [ -n "$DEVCONTAINER" ]; then
+    return 0
+  fi
+
+  return 1
+}
+
+# if inside container, change Ghostty background color
+if __is_container; then
+  __set_terminal_bg '#202040'
+fi
+
+# if remote access, change Ghostty background color (override)
 if [ -n "$SSH_CONNECTION" ]; then
-    printf '\e]11;#204022\a'
+  __set_terminal_bg '#204022'
 fi
 
 # launch fish
