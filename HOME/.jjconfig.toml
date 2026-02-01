@@ -1,0 +1,5 @@
+#:schema https://docs.jj-vcs.dev/latest/config-schema.json
+
+[user]
+name = "Hayato Mizushima"
+email = "hayato-m126@users.noreply.github.com"
