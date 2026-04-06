@@ -38,12 +38,6 @@ if [ -n "$SSH_CONNECTION" ]; then
     printf '\e]11;#204022\a'
 fi
 
-# launch fish
-if [ -z "$FISH_VERSION" ] && [ "$USE_DEVCONTAINER" != "true" ]; then
-  command -v fish > /dev/null 2>&1 && exec fish
-fi
-
-# When not using fish, activate mise in bash.
 if test -f ~/.local/bin/mise; then
   eval "$(~/.local/bin/mise activate bash)"
 fi

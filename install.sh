@@ -1,6 +1,5 @@
 #!/bin/bash
 
-mkdir -p ~/.config/fish
 mkdir -p ~/.config/ghostty
 mkdir -p ~/.config/git
 mkdir -p ~/.config/mise

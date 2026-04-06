@@ -15,7 +15,6 @@ Repository for managing configuration files
 ## reference
 
 - <https://gitlab.com/clear-code/ssh.d>
-- <https://qiita.com/kenji-miyake/items/06b8c3807bef0ba5c451#fish-shell>
 - <https://github.com/kenji-miyake/dotfiles>
 
 ## VSCode Git Settings
