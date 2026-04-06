@@ -76,6 +76,8 @@ gitca() {
   git submodule foreach git clean -df
 }
 
+alias gitdb ="git branch | xargs git branch -D"
+
 conflict() {
   OUTPUT_FILE="merge_conflict_$(date +%Y%m%d_%H%M%S).md"
   CONFLICTED_FILES="$(git diff --name-only --diff-filter=U)"
