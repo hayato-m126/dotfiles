@@ -4,7 +4,14 @@ case $- in
       *) return;;
 esac
 
-source /etc/skel/.bashrc
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+  source /etc/skel/.bashrc
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+  # macOS specific settings
+  if [ -f /etc/bashrc ]; then
+    source /etc/bashrc
+  fi
+fi
 
 if [[ -d /run/WSL ]]; then
     export BROWSER="'/mnt/c/Program Files (x86)/Microsoft/Edge/Application/msedge.exe'"
