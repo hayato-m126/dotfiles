@@ -8,4 +8,3 @@ fi
 
 # Added by Antigravity
 export PATH="/Users/hyt/.antigravity/antigravity/bin:$PATH"
-
