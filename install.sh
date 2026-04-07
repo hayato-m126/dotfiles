@@ -3,7 +3,6 @@
 mkdir -p ~/.config/ghostty
 mkdir -p ~/.config/git
 mkdir -p ~/.config/mise
-mkdir -p ~/.config/terminator/plugins
 mkdir -p ~/.ros
 mkdir -p ~/.ssh/conf.d
 
