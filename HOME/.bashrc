@@ -124,7 +124,6 @@ __fzf_history_search() {
 }
 bind -x '"\C-r": __fzf_history_search'
 
-
 __ghq_cd() {
   # ghqで管理しているリポジトリ一覧からfzfで選択し、そのディレクトリへ移動
   local repo_dir
@@ -134,3 +133,7 @@ __ghq_cd() {
   fi
 }
 bind -x '"\C-g": __ghq_cd'
+
+if command -v jj > /dev/null 2>&1; then
+  source <(jj util completion bash)
+fi
