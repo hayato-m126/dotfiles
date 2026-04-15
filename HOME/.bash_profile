@@ -2,5 +2,6 @@
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
   export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
-  source ~/.bashrc
 fi
+
+source ~/.bashrc
