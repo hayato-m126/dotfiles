@@ -22,6 +22,6 @@ if [ -f "/.dockerenv" ] || [ -n "$REMOTE_CONTAINERS" ] || [ -n "$DEVCONTAINER" ]
   # mise
   curl https://mise.run | sh
 
-  # claude code
+  # install claude binary version
   curl -fsSL https://claude.ai/install.sh | bash
 fi
