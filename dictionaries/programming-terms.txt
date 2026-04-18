@@ -81,6 +81,7 @@ NOTSET
 nsswitch
 nvram
 ollama
+openspec
 orbstack
 packagekitd
 pathsep
