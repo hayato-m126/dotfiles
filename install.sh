@@ -15,3 +15,13 @@ for file in `find . -type f` ; do
   # echo ${HOME}/$relative_path
   ln -snfv `realpath $file` ${HOME}/$relative_path
 done
+
+if [ -f "/.dockerenv" ] || [ -n "$REMOTE_CONTAINERS" ] || [ -n "$DEVCONTAINER" ]; then
+  echo "devcontainer detected, installing extra tools..."
+
+  # mise
+  curl https://mise.run | sh
+
+  # claude code
+  curl -fsSL https://claude.ai/install.sh | bash
+fi
