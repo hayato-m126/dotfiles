@@ -20,7 +20,7 @@ if [ -f "/.dockerenv" ] || [ -n "$REMOTE_CONTAINERS" ] || [ -n "$DEVCONTAINER" ]
   echo "devcontainer detected, installing extra tools..."
 
   # mise
-  curl https://mise.run | sh
+  # curl https://mise.run | sh
 
   # install claude binary version
   curl -fsSL https://claude.ai/install.sh | bash
