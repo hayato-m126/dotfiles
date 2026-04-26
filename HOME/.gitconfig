@@ -16,8 +16,8 @@
 [core]
   editor = nano
 [credential "https://github.com"]
-	helper = 
-	helper = !/home/hyt/.local/share/mise/installs/github-cli/2.89.0/gh_2.89.0_linux_amd64/bin/gh auth git-credential
+	helper =
+	helper = !gh auth git-credential
 [credential "https://gist.github.com"]
-	helper = 
-	helper = !/home/hyt/.local/share/mise/installs/github-cli/2.89.0/gh_2.89.0_linux_amd64/bin/gh auth git-credential
+	helper =
+	helper = !gh auth git-credential
