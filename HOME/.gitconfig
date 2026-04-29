@@ -1,9 +1,6 @@
 [user]
   name = Hayato Mizushima
   email = hayato-m126@users.noreply.github.com
-# for autoware
-# [url "git@github.com:"]
-#   insteadOf = https://github.com/
 [ghq]
   root = ~/ghq
 [filter "lfs"]
