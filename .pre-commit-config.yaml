@@ -18,12 +18,12 @@ repos:
         args: [--markdown-linebreak-ext=md]
 
   - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.45.0
+    rev: v0.48.0
     hooks:
       - id: markdownlint
         args: [-c, .markdownlint.yaml, --fix]
 
   - repo: https://github.com/streetsidesoftware/cspell-cli
-    rev: v9.2.0
+    rev: v10.0.0
     hooks:
       - id: cspell # Spell check changed files
