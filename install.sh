@@ -19,9 +19,7 @@ done
 if [ -f "/.dockerenv" ] || [ -n "$REMOTE_CONTAINERS" ] || [ -n "$DEVCONTAINER" ]; then
   echo "devcontainer detected, installing extra tools..."
 
-  # mise
-  curl https://mise.run | sh
-
-  # install claude binary version
-  curl -fsSL https://claude.ai/install.sh | bash
+  # install fzf to use history search in devcontainer
+  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+  ~/.fzf/install
 fi
