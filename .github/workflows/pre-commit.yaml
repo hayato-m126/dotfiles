@@ -20,5 +20,10 @@ jobs:
         with:
           node-version: '24'
 
+      - name: Setup cspell dictionaries
+        run: |
+          mkdir -p ~/.config
+          ln -s ${{ github.workspace }}/HOME/.config/cspell ~/.config/cspell
+
       - name: Run pre-commit
         uses: pre-commit/action@v3.0.1
