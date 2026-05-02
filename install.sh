@@ -3,6 +3,7 @@
 mkdir -p ~/.config/ghostty
 mkdir -p ~/.config/git
 mkdir -p ~/.config/mise
+mkdir -p ~/.config/cspell
 mkdir -p ~/.ros
 mkdir -p ~/.ssh/conf.d
 
