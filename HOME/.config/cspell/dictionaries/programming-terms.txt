@@ -217,6 +217,7 @@ Xorg
 xrdp
 xsession
 xset
+Yaru
 Yubikey
 zoneinfo
 zstd
