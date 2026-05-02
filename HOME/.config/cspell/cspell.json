@@ -1,0 +1,21 @@
+{
+  "version": "0.2",
+  "dictionaries": ["person-names", "programming-terms", "abbreviation"],
+  "dictionaryDefinitions": [
+    {
+      "name": "person-names",
+      "path": "./dictionaries/person-names.txt",
+      "description": "name / nick-name of developer, or tool author"
+    },
+    {
+      "name": "programming-terms",
+      "path": "./dictionaries/programming-terms.txt",
+      "description": "general programming terms"
+    },
+    {
+      "name": "abbreviation",
+      "path": "./dictionaries/abbreviation.txt",
+      "description": "abbreviations used only by myself"
+    }
+  ]
+}
