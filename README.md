@@ -4,8 +4,8 @@ Repository for managing configuration files
 
 ## environment
 
-- Ubuntu 22.04 / 24.04
-- macOS Sonoma / Sequoia
+- Ubuntu 24.04
+- macOS Sequoia
 
 ## usage
 
