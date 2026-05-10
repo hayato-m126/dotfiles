@@ -117,10 +117,3 @@ echo "  2. chezmoi cd                # source ディレクトリに移動"
 echo "  3. git init && git remote add origin <your-repo>"
 echo "  4. chezmoi apply             # 適用"
 echo
-info "既存の .dotfiles/install.sh は install-legacy.sh に残してあります。"
-info "動作確認後、不要であれば削除してください。"
-
-# install.sh をバックアップ
-if [ -f "${HOME}/.dotfiles/install.sh" ] && [ ! -f "${HOME}/.dotfiles/install-legacy.sh" ]; then
-    cp "${HOME}/.dotfiles/install.sh" "${HOME}/.dotfiles/install-legacy.sh"
-fi
