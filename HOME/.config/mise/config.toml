@@ -2,6 +2,7 @@
 actionlint = "latest"
 bazelisk = "latest"
 bun = "1"
+chezmoi = "latest"
 fd = "latest"
 fzf = "latest"
 ghq = "latest"

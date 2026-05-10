@@ -23,6 +23,7 @@ buildx
 byobu
 bzlmod
 ccache
+chezmoi
 clangd
 CLSID
 colcon
