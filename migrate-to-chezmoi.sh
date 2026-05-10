@@ -81,7 +81,7 @@ while IFS= read -r -d '' src_file; do
         continue
     fi
 
-    if chezmoi add "${home_file}" 2>/dev/null; then
+    if chezmoi add --follow "${home_file}" 2>/dev/null; then
         info "  Added: ~/${rel}"
         (( ADDED++ )) || true
     else
