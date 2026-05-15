@@ -192,6 +192,7 @@ termcolor
 tlsv
 tmpuser
 tqdm
+traceprinter
 unhold
 unocss
 urandom
