@@ -16,3 +16,5 @@ foreground = 00ff00
 background = 000000
 cursor-color = aaaaaa
 
+# https://github.com/ghostty-org/ghostty/discussions/11973
+resize-overlay = never
