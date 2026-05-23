@@ -79,6 +79,7 @@ hidpi
 HKCU
 httpx
 hwclock
+hwmon
 iloc
 insertafter
 isna
@@ -201,6 +202,7 @@ usbuntu
 usefixtures
 USERPROFILE
 uvicorn
+vcgencmd
 vcstool
 venv
 vhdx
