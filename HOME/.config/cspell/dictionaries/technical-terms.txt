@@ -138,6 +138,7 @@ nowrap
 nsswitch
 nvitop
 NvLumos
+nvme
 nvram
 ollama
 orbstack
@@ -205,6 +206,7 @@ uvicorn
 vcgencmd
 vcstool
 venv
+vfat
 vhdx
 vite
 winbind
