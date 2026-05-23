@@ -1,6 +1,6 @@
 {
   "version": "0.2",
-  "dictionaries": ["person-names", "programming-terms", "abbreviation"],
+  "dictionaries": ["person-names", "technical-terms", "abbreviation", "misc"],
   "dictionaryDefinitions": [
     {
       "name": "person-names",
