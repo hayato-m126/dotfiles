@@ -122,6 +122,7 @@ mcap
 medo
 miterlimit
 mitmdump
+momentics
 moto
 mozc
 Muhenkan
