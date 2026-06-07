@@ -1,3 +1,4 @@
+Adwaita
 appdir
 APTURL
 argcomplete
@@ -77,6 +78,7 @@ Henkan
 hexsha
 hidpi
 HKCU
+hmac
 httpx
 hwclock
 hwmon
@@ -157,6 +159,9 @@ pylance
 pyproject
 pytest
 pyyaml
+qnxmomenticside
+qnxpi
+qnxuser
 qualname
 RCUTILS
 remotehub
