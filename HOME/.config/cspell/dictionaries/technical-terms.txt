@@ -119,6 +119,7 @@ localtime
 logind
 markdownlint
 markwhen
+Marp
 matchdirs
 mcap
 medo
