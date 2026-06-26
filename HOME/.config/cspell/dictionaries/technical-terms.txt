@@ -171,6 +171,7 @@ rerere
 rerunfailures
 rmem
 rosbag
+runfiles
 rustup
 scrollback
 selectinload
