@@ -1,5 +1,6 @@
 [tools]
 actionlint = "latest"
+bat = "latest"
 bazelisk = "latest"
 bun = "1"
 fd = "latest"
