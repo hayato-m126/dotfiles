@@ -83,6 +83,7 @@ httpx
 hwclock
 hwmon
 iloc
+infocmp
 insertafter
 isna
 isnot
