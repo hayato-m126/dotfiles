@@ -75,6 +75,7 @@ gpasswd
 gufw
 hardinfo
 Henkan
+herdr
 hexsha
 hidpi
 HKCU
