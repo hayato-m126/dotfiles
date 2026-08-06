@@ -77,8 +77,6 @@ gitca() {
   git submodule foreach git clean -df
 }
 
-# 指定ブランチのFROM_COMMIT以降のコミット一覧をCSV出力する
-# Usage: gitcl <branch> <from_commit> [output_file]
 gitcl() {
   local branch="${1:?Usage: gitcl <branch> <from_commit> [output_file]}"
   local from_commit="${2:?Usage: gitcl <branch> <from_commit> [output_file]}"
@@ -87,10 +85,17 @@ gitcl() {
   echo "Fetching branch: ${branch} ..."
   git fetch origin "${branch}"
 
-  echo "Extracting commits: ${from_commit}..FETCH_HEAD ..."
+  # NOTE: "A..B" filters by ancestry, not by date. Unrelated/merged-in old
+  # histories (e.g. imported from another project) can still show up even
+  # though they are older than from_commit, because they are not its ancestor.
+  # Filter by from_commit's date too, so only commits made after it are kept.
+  local since_date
+  since_date=$(git show -s --format=%aI "${from_commit}")
+
+  echo "Extracting commits: ${from_commit}..FETCH_HEAD (since ${since_date}) ..."
   local tmpfile
   tmpfile=$(mktemp)
-  git log "${from_commit}..FETCH_HEAD" --pretty=format:"%H|||%s|||%an|||%aI" > "${tmpfile}"
+  git log "${from_commit}..FETCH_HEAD" --since="${since_date}" --pretty=format:"%H|||%s|||%an|||%aI" > "${tmpfile}"
 
   local commit_count
   commit_count=$(wc -l < "${tmpfile}")
