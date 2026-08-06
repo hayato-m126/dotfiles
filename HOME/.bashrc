@@ -77,6 +77,58 @@ gitca() {
   git submodule foreach git clean -df
 }
 
+# 指定ブランチのFROM_COMMIT以降のコミット一覧をCSV出力する
+# Usage: gitcl <branch> <from_commit> [output_file]
+gitcl() {
+  local branch="${1:?Usage: gitcl <branch> <from_commit> [output_file]}"
+  local from_commit="${2:?Usage: gitcl <branch> <from_commit> [output_file]}"
+  local output="${3:-commits_$(echo "$branch" | tr '/' '_').csv}"
+
+  echo "Fetching branch: ${branch} ..."
+  git fetch origin "${branch}"
+
+  echo "Extracting commits: ${from_commit}..FETCH_HEAD ..."
+  local tmpfile
+  tmpfile=$(mktemp)
+  git log "${from_commit}..FETCH_HEAD" --pretty=format:"%H|||%s|||%an|||%aI" > "${tmpfile}"
+
+  local commit_count
+  commit_count=$(wc -l < "${tmpfile}")
+  echo "Found ${commit_count} commits."
+
+  python3 -c "
+import csv
+import re
+import sys
+
+tmpfile = sys.argv[1]
+output = sys.argv[2]
+
+with open(tmpfile, 'r', encoding='utf-8') as f:
+    lines = f.read().strip().split('\n')
+
+rows = []
+for line in lines:
+    parts = line.split('|||')
+    if len(parts) != 4:
+        continue
+    commit_hash, title, author, commit_date = parts
+    m = re.search(r'\(#(\d+)\)', title)
+    pr_number = m.group(1) if m else ''
+    rows.append([commit_hash, commit_date, pr_number, title, author])
+
+with open(output, 'w', newline='', encoding='utf-8') as f:
+    writer = csv.writer(f)
+    writer.writerow(['Commit Hash', 'Commit Date', 'PR Number', 'Commit Title', 'Author'])
+    for row in rows:
+        writer.writerow(row)
+
+print(f'Output: {output} ({len(rows)} commits)')
+" "${tmpfile}" "${output}"
+
+  rm -f "${tmpfile}"
+}
+
 alias gitdb="git branch | xargs git branch -D"
 
 conflict() {
