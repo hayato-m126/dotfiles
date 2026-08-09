@@ -206,6 +206,7 @@ tlsv
 tmpuser
 tqdm
 traceprinter
+UEFI
 unhold
 unocss
 urandom
