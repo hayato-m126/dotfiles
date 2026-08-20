@@ -1,3 +1,4 @@
+acados
 Adwaita
 appdir
 APTURL
@@ -45,6 +46,7 @@ dearmour
 debugpy
 deepl
 defaultbranch
+deinit
 devcontainers
 DISTRO
 Dload
@@ -128,6 +130,7 @@ mcap
 medo
 miterlimit
 mitmdump
+mktemp
 momentics
 moto
 mozc
@@ -224,6 +227,7 @@ vhdx
 vite
 winbind
 WORKDIR
+writerow
 wslg
 wslu
 wslview
