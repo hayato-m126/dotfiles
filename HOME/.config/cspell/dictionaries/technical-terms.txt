@@ -1,3 +1,4 @@
+
 Adwaita
 appdir
 APTURL
@@ -128,6 +129,7 @@ mcap
 medo
 miterlimit
 mitmdump
+mktemp
 momentics
 moto
 mozc
@@ -224,6 +226,7 @@ vhdx
 vite
 winbind
 WORKDIR
+writerow
 wslg
 wslu
 wslview

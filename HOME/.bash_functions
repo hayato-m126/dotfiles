@@ -11,16 +11,55 @@ taz() {
   tar -I zstd -cvf "$archive" "$dir"
 }
 
-gitca() {
+gca() {
   git reset --hard HEAD && \
   git clean -df && \
   git submodule foreach git reset --hard HEAD && \
   git submodule foreach git clean -df
 }
 
-gitcl() {
-  local branch="${1:?Usage: gitcl <branch> <from_commit> [output_file]}"
-  local from_commit="${2:?Usage: gitcl <branch> <from_commit> [output_file]}"
+# git diff to markdown for merge conflict
+gdc() {
+  OUTPUT_FILE="merge_conflict_$(date +%Y%m%d_%H%M%S).md"
+  CONFLICTED_FILES="$(git diff --name-only --diff-filter=U)"
+  if [[ -z "$CONFLICTED_FILES" ]]; then
+    CONFLICTED_COUNT=0
+  else
+    CONFLICTED_COUNT="$(printf '%s\n' "$CONFLICTED_FILES" | wc -l)"
+  fi
+
+  echo "# Merge Conflict" > "$OUTPUT_FILE"
+  echo "" >> "$OUTPUT_FILE"
+  echo "Date: $(date)" >> "$OUTPUT_FILE"
+  echo "Branch: $(git branch --show-current)" >> "$OUTPUT_FILE"
+  echo "" >> "$OUTPUT_FILE"
+
+  echo "Conflicted files: $CONFLICTED_COUNT" >> "$OUTPUT_FILE"
+  echo "" >> "$OUTPUT_FILE"
+
+  echo "## Conflicted Files" >> "$OUTPUT_FILE"
+  echo '```' >> "$OUTPUT_FILE"
+  printf '%s\n' "$CONFLICTED_FILES" >> "$OUTPUT_FILE"
+  echo '```' >> "$OUTPUT_FILE"
+  echo "" >> "$OUTPUT_FILE"
+
+  echo "## Conflict Details" >> "$OUTPUT_FILE"
+  while IFS= read -r file; do
+    [[ -z "$file" ]] && continue
+    echo "### $file" >> "$OUTPUT_FILE"
+    echo '```diff' >> "$OUTPUT_FILE"
+    git diff "$file" >> "$OUTPUT_FILE"
+    echo '```' >> "$OUTPUT_FILE"
+    echo "" >> "$OUTPUT_FILE"
+  done <<< "$CONFLICTED_FILES"
+
+  echo "Saved to: $OUTPUT_FILE"
+}
+
+# git log to csv
+glc() {
+  local branch="${1:?Usage: glc <branch> <from_commit> [output_file]}"
+  local from_commit="${2:?Usage: glc <branch> <from_commit> [output_file]}"
   local output="${3:-commits_$(echo "$branch" | tr '/' '_').csv}"
 
   echo "Fetching branch: ${branch} ..."
@@ -73,43 +112,6 @@ print(f'Output: {output} ({len(rows)} commits)')
 " "${tmpfile}" "${output}"
 
   rm -f "${tmpfile}"
-}
-
-conflict() {
-  OUTPUT_FILE="merge_conflict_$(date +%Y%m%d_%H%M%S).md"
-  CONFLICTED_FILES="$(git diff --name-only --diff-filter=U)"
-  if [[ -z "$CONFLICTED_FILES" ]]; then
-    CONFLICTED_COUNT=0
-  else
-    CONFLICTED_COUNT="$(printf '%s\n' "$CONFLICTED_FILES" | wc -l)"
-  fi
-
-  echo "# Merge Conflict" > "$OUTPUT_FILE"
-  echo "" >> "$OUTPUT_FILE"
-  echo "Date: $(date)" >> "$OUTPUT_FILE"
-  echo "Branch: $(git branch --show-current)" >> "$OUTPUT_FILE"
-  echo "" >> "$OUTPUT_FILE"
-
-  echo "Conflicted files: $CONFLICTED_COUNT" >> "$OUTPUT_FILE"
-  echo "" >> "$OUTPUT_FILE"
-
-  echo "## Conflicted Files" >> "$OUTPUT_FILE"
-  echo '```' >> "$OUTPUT_FILE"
-  printf '%s\n' "$CONFLICTED_FILES" >> "$OUTPUT_FILE"
-  echo '```' >> "$OUTPUT_FILE"
-  echo "" >> "$OUTPUT_FILE"
-
-  echo "## Conflict Details" >> "$OUTPUT_FILE"
-  while IFS= read -r file; do
-    [[ -z "$file" ]] && continue
-    echo "### $file" >> "$OUTPUT_FILE"
-    echo '```diff' >> "$OUTPUT_FILE"
-    git diff "$file" >> "$OUTPUT_FILE"
-    echo '```' >> "$OUTPUT_FILE"
-    echo "" >> "$OUTPUT_FILE"
-  done <<< "$CONFLICTED_FILES"
-
-  echo "Saved to: $OUTPUT_FILE"
 }
 
 __fzf_history_search() {
