@@ -1,4 +1,4 @@
-
+acados
 Adwaita
 appdir
 APTURL
@@ -46,6 +46,7 @@ dearmour
 debugpy
 deepl
 defaultbranch
+deinit
 devcontainers
 DISTRO
 Dload
