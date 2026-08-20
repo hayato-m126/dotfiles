@@ -1,6 +1,8 @@
 alias untaz="tar -I zstd -xvf"
-
-# bazel
 alias bazel="bazelisk"
-
-alias gitdb="git branch | xargs git branch -D"
+alias gdb="git branch | xargs git branch -D"
+alias gds="git submodule deinit -f -all"
+alias gs="git status"
+alias gb="git branch"
+alias gl="git log --oneline --graph --decorate --all"
+alias g="git"
