@@ -191,6 +191,35 @@ __ghq_cd() {
 }
 bind -x '"\C-g": __ghq_cd'
 
+# fishのabbrのように、alias名の後にスペースを押すと実体のコマンドへ展開する
+__abbr_expand() {
+  local cursor=$READLINE_POINT
+  local line="$READLINE_LINE"
+  local before="${line:0:cursor}"
+  local after="${line:cursor}"
+  local word="${before##*[[:space:]]}"
+  local head="${before%"$word"}"
+  local expansion=""
+
+  # コマンド位置(行頭・; | & ( の直後)にある単語だけをalias展開の対象にする
+  if [[ -n "$word" && "$head" =~ (^[[:space:]]*$|[\;\|\&\(][[:space:]]*$) ]]; then
+    expansion=$(alias "$word" 2>/dev/null)
+    if [[ -n "$expansion" ]]; then
+      expansion="${expansion#*=\'}"
+      expansion="${expansion%\'}"
+    fi
+  fi
+
+  if [[ -n "$expansion" ]]; then
+    READLINE_LINE="${head}${expansion} ${after}"
+    READLINE_POINT=$((${#head} + ${#expansion} + 1))
+  else
+    READLINE_LINE="${before} ${after}"
+    READLINE_POINT=$((cursor + 1))
+  fi
+}
+bind -x '" ": __abbr_expand'
+
 if command -v jj > /dev/null 2>&1; then
   source <(jj util completion bash)
 fi
