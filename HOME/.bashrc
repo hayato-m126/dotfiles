@@ -192,6 +192,23 @@ __ghq_cd() {
 bind -x '"\C-g": __ghq_cd'
 
 # fishのabbrのように、alias名の後にスペースを押すと実体のコマンドへ展開する
+declare -A __ABBR_MAP=()
+
+# スペース押下のたびにサブシェルでaliasを引かないよう、事前に連想配列へキャッシュする
+__abbr_refresh() {
+  __ABBR_MAP=()
+  local line name value
+  while IFS= read -r line; do
+    [[ $line =~ ^alias\ ([^=]+)=(.*)$ ]] || continue
+    name="${BASH_REMATCH[1]}"
+    value="${BASH_REMATCH[2]}"
+    value="${value#\'}"
+    value="${value%\'}"
+    __ABBR_MAP["$name"]="$value"
+  done < <(alias -p)
+}
+__abbr_refresh
+
 __abbr_expand() {
   local cursor=$READLINE_POINT
   local line="$READLINE_LINE"
@@ -203,11 +220,7 @@ __abbr_expand() {
 
   # コマンド位置(行頭・; | & ( の直後)にある単語だけをalias展開の対象にする
   if [[ -n "$word" && "$head" =~ (^[[:space:]]*$|[\;\|\&\(][[:space:]]*$) ]]; then
-    expansion=$(alias "$word" 2>/dev/null)
-    if [[ -n "$expansion" ]]; then
-      expansion="${expansion#*=\'}"
-      expansion="${expansion%\'}"
-    fi
+    expansion="${__ABBR_MAP[$word]}"
   fi
 
   if [[ -n "$expansion" ]]; then
