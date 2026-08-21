@@ -157,6 +157,7 @@ pathlib
 pathsep
 pciutils
 pgadmin
+picocom
 pipx
 poolclass
 psycopg
