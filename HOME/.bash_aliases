@@ -1,4 +1,5 @@
 alias bazel="bazelisk"
+alias c="code ."
 alias g="git"
 alias gb="git branch"
 alias gdb="git branch | xargs git branch -D"
