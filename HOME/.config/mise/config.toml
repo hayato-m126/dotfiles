@@ -8,7 +8,7 @@ fzf = "latest"
 ghq = "latest"
 github-cli = "latest"
 hadolint = "latest"
-herdr = "latest"
+herdr = { version = "latest", os = ["linux", "darwin"] }
 jjui = "latest"
 jq = "latest"
 jujutsu = "latest"
