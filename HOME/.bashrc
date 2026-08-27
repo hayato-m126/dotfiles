@@ -11,6 +11,11 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
   if [ -f /etc/bashrc ]; then
     source /etc/bashrc
   fi
+elif [[ "$OSTYPE" == "msys"* ]]; then
+  # Git Bash (MSYS2) specific settings
+  if [ -f /etc/bash.bashrc ]; then
+    source /etc/bash.bashrc
+  fi
 fi
 
 if [[ -d /run/WSL ]]; then
@@ -37,6 +42,8 @@ fi
 if test -f ~/.local/bin/mise; then
   eval "$(~/.local/bin/mise activate bash)"
 fi
+
+[ -d "$HOME/AppData/Local/mise/shims" ] && export PATH="$HOME/AppData/Local/mise/shims:$PATH"
 
 if command -v jj > /dev/null 2>&1; then
   source <(jj util completion bash)
