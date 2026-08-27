@@ -136,6 +136,7 @@ momentics
 moto
 mozc
 Muhenkan
+muxer
 mxfile
 ncdu
 nemo
