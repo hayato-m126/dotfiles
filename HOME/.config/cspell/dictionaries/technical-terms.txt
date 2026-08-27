@@ -138,6 +138,7 @@ mozc
 Muhenkan
 muxer
 mxfile
+nativestrict
 ncdu
 nemo
 netrc
@@ -229,6 +230,7 @@ vfat
 vhdx
 vite
 winbind
+winsymlinks
 WORKDIR
 writerow
 wslg

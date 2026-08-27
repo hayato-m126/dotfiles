@@ -1,5 +1,9 @@
 #!/bin/bash
 
+if [[ "$OSTYPE" == "msys"* ]]; then
+  export MSYS=winsymlinks:nativestrict
+fi
+
 mkdir -p ~/.config/ghostty
 mkdir -p ~/.config/git
 mkdir -p ~/.config/mise
