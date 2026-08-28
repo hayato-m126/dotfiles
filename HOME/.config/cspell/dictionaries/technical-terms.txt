@@ -1,4 +1,5 @@
 acados
+activitywatch
 Adwaita
 appdir
 APTURL
