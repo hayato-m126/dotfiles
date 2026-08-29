@@ -21,6 +21,14 @@ for file in `find . -type f` ; do
   ln -snfv `realpath $file` ${HOME}/$relative_path
 done
 
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  # cspell looks up its global config at ~/Library/Preferences/cspell on macOS
+  # (XDG's ~/.config/cspell is only honored on Linux), so link the whole
+  # directory there too, keeping cspell.json and dictionaries/ together.
+  mkdir -p ~/Library/Preferences
+  ln -snfv `realpath ${SCRIPT_DIR}/HOME/.config/cspell` ~/Library/Preferences/cspell
+fi
+
 if [ -f "/.dockerenv" ] || [ -n "$REMOTE_CONTAINERS" ] || [ -n "$DEVCONTAINER" ]; then
   echo "devcontainer detected, installing extra tools..."
 
