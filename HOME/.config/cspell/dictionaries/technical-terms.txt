@@ -215,6 +215,7 @@ tlsv
 tmpuser
 tqdm
 traceprinter
+Typer
 UEFI
 unhold
 unocss
