@@ -10,9 +10,6 @@ browse.vc.db
 browse.vc.db-shm
 browse.vc.db-wal
 
-# dictionary
-.cspell.json
-
 # python cache
 __pycache__/
 
