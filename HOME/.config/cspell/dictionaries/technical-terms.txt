@@ -51,7 +51,7 @@ deinit
 devcontainers
 DISTRO
 Dload
-Dokerfile
+Dockerfile
 dotenv
 dotenvx
 dpkg
