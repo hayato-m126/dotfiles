@@ -49,6 +49,7 @@ if command -v jj > /dev/null 2>&1; then
   source <(jj util completion bash)
 fi
 
+[ -f "$HOME/.local/share/blesh/ble.sh" ] && source "$HOME/.local/share/blesh/ble.sh"
 [ -f "$HOME/.secrets/env.sh" ] && source "$HOME/.secrets/env.sh"
 [ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
 [ -d "/opt/ros" ] && source "$HOME/.ros/setup.sh"
