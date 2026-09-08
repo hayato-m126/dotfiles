@@ -1,5 +1,7 @@
 alias bazel="bazelisk"
 alias c="code ."
+alias dce="devcontainer exec --workspace-folder . --config"
+alias dcu="devcontainer up --workspace-folder . --config"
 alias g="git"
 alias gb="git branch"
 alias gdb="git branch | xargs git branch -D"
