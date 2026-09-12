@@ -177,6 +177,7 @@ qnxmomenticside
 qnxpi
 qnxuser
 qualname
+raspi
 RCUTILS
 remotehub
 repr
