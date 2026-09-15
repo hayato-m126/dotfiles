@@ -1,7 +1,7 @@
 alias bazel="bazelisk"
 alias c="code ."
 alias dce="devcontainer exec --workspace-folder . --config"
-alias dcu="devcontainer up --workspace-folder . --config"
+alias dcu="devcontainer up --workspace-folder . --dotfiles-repository https://github.com/hayato-m126/dotfiles --dotfiles-target-path ~/.dotfiles --dotfiles-install-command install.sh --config"
 alias g="git"
 alias gb="git branch"
 alias gdb="git branch | xargs git branch -D"
