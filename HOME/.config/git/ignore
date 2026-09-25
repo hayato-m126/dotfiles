@@ -22,3 +22,6 @@ __pycache__/
 
 # github copilot skills
 .github/skills/**
+
+# my workdir
+.hm-work
