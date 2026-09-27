@@ -3,6 +3,8 @@ export ROS_DOMAIN_ID=77
 export RCUTILS_COLORIZED_OUTPUT=1
 export CYCLONEDDS_URI=file://$HOME/.ros/cyclonedds.xml
 
+export TURTLEBOT3_MODEL=burger
+
 # DDS
 #ifconfig lo multicast
 
