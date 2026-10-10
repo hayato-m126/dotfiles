@@ -20,7 +20,6 @@ alias jgp="jj git push -b"
 alias p="pre-commit run -a"
 alias untaz="tar -I zstd -xvf"
 
-# wsl only
 if [[ -d /run/WSL ]]; then
-  alias docker="wslc.exe"
+  alias wslc="wslc.exe"
 fi
