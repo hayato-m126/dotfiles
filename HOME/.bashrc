@@ -52,4 +52,4 @@ fi
 [ -f "$HOME/.local/share/blesh/ble.sh" ] && source "$HOME/.local/share/blesh/ble.sh"
 [ -f "$HOME/.secrets/env.sh" ] && source "$HOME/.secrets/env.sh"
 [ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
-[ -d "/opt/ros" ] && source "$HOME/.ros/setup.sh"
+# [ -d "/opt/ros" ] && source "$HOME/.ros/setup.sh"
