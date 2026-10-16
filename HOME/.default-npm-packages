@@ -1,4 +1,5 @@
 cspell
+markdownlint-cli2
 @devcontainers/cli
 @github/copilot
 @openai/codex
