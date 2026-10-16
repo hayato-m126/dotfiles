@@ -1,3 +1,14 @@
+run_with_log() (
+    set -o pipefail
+
+    if (( $# == 0 )); then
+        printf 'Usage: run_with_log command [args...]\n' >&2
+        exit 2
+    fi
+
+    "$@" 2>&1 | tee "run_$(date +%Y%m%d_%H%M%S_%N).log"
+)
+
 # zstd
 taz() {
   if [ $# -ne 1 ]; then
