@@ -4,10 +4,11 @@ if [[ "$OSTYPE" == "msys"* ]]; then
   export MSYS=winsymlinks:nativestrict
 fi
 
+mkdir -p ~/.config/cspell/dictionaries
 mkdir -p ~/.config/ghostty
 mkdir -p ~/.config/git
+mkdir -p ~/.config/herdr
 mkdir -p ~/.config/mise
-mkdir -p ~/.config/cspell/dictionaries
 mkdir -p ~/.ros
 mkdir -p ~/.ssh/conf.d
 
