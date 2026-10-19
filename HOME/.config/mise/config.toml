@@ -17,6 +17,7 @@ node = "24"
 packer = "latest"
 pnpm = "latest"
 ripgrep = "latest"
+terraform = "latest"
 usage = "latest"
 yq = "latest"
 
