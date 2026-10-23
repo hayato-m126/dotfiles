@@ -4,6 +4,7 @@ log/
 # local settings
 .envrc
 .tool-versions
+.mise.local.toml
 
 # vscode cache
 browse.vc.db
