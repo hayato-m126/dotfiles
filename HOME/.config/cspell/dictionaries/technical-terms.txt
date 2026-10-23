@@ -50,6 +50,7 @@ deepl
 defaultbranch
 deinit
 devcontainers
+direnv
 DISTRO
 Dload
 Dockerfile
@@ -148,6 +149,7 @@ netrc
 nistp
 NKCSG
 nloc
+nohup
 nomodeset
 NOTSET
 nowrap

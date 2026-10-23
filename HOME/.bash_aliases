@@ -19,6 +19,8 @@ alias jd="jj desc -m"
 alias jgp="jj git push -b"
 alias p="pre-commit run -a"
 alias untaz="tar -I zstd -xvf"
+alias log-vmstat="nohup vmstat -t -n 5 > vmstat_$(date +%Y%m%d_%H%M%S_%N).log 2>&1 &"
+alias stop-vmstat="pkill -f 'vmstat -t'"
 
 if [[ -d /run/WSL ]]; then
   alias wslc="wslc.exe"
