@@ -152,6 +152,7 @@ NKCSG
 nloc
 nohup
 nomodeset
+notnone
 NOTSET
 nowrap
 nsswitch
