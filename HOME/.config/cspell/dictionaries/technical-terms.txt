@@ -3,6 +3,7 @@ activitywatch
 Adwaita
 appdir
 APTURL
+archiver
 argcomplete
 armhf
 ASGI
@@ -164,6 +165,7 @@ packagekitd
 pathlib
 pathsep
 pciutils
+peazip
 pgadmin
 picocom
 pipx
