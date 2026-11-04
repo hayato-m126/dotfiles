@@ -34,11 +34,6 @@ fi
 export PATH="/usr/local/cuda/bin:$PATH"
 export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
 
-# if remote access, change Ghostty background color
-if [ -n "$SSH_CONNECTION" ]; then
-    printf '\e]11;#204022\a'
-fi
-
 if test -f ~/.local/bin/mise; then
   eval "$(~/.local/bin/mise activate bash)"
 fi
