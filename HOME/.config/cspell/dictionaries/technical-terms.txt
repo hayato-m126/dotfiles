@@ -259,4 +259,5 @@ xset
 Yaru
 Yubikey
 zoneinfo
+zstandard
 zstd
